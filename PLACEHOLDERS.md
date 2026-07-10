@@ -27,7 +27,7 @@ Everything on the site that is stand-in and needs the publisher before v1 can be
 
 ## Draft copy and design choices
 
-- **Site copy is draft**: the homepage identity line and press-voice passage, and the About page, are written in house voice as a starting point. They are yours to approve or rewrite.
+- **Site copy**: the About page, the homepage press-voice passage, and the one-line identity (meta and OG description) are final, supplied by the publisher. Still draft: the home hero headline ("Fiction with a healing element") and its subtitle, and the footer descriptor line, which the publisher may want to align with the new positioning.
 - **Fonts**: v1 uses a system serif stack (Hoefler Text, Iowan Old Style, Georgia) so the site stays fast and free of external requests. Self-hosting a characterful serif such as Fraunces for titles and Newsreader for body is an easy upgrade later if you want more character.
 
 ## Decisions still open
