@@ -1,0 +1,17 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# os and editor cruft
+.DS_Store
+*.log
+
+# environment and secrets
+.env
+.env.*
+
+# root copy of the reference map; the served copy is public/studio/production-line.html
+/murmmers-production-line.html
