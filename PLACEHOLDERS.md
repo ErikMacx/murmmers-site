@@ -17,7 +17,7 @@ Everything on the site that is stand-in and needs the publisher before v1 can be
 
 - **Newsletter provider**: the signup form posts to a placeholder action (`/newsletter-todo`). No provider is invented. Wire the real action, and double opt-in, when the provider is chosen.
 - **Direct purchase (Payhip)**: a visually distinct disabled "coming soon" slot is reserved on each published book page for v1.5.
-- **Studio access**: `/studio` (and the production-line map under it) ships in the build but must be gated by Cloudflare Access on `murmmers.com/studio*` before or at the step (c) push. Until the Access policy exists, the path is publicly reachable by anyone with the link. robots.txt disallows it but that is not protection.
+- **Studio access**: resolved. `/studio` (and the production-line map under it) is live and gated by Cloudflare Access on both `murmmers.com` and `www.murmmers.com`; verified that the map is not reachable without login. Keep the Allow policy scoped to your email.
 - **OG images**: each book page uses its cover as the Open Graph image. A composed OG card (cover plus title) can replace this later.
 
 ## Rulings recorded (not oversights)
