@@ -1,0 +1,83 @@
+---
+import { getImage } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import Cover from '../../components/Cover.astro';
+import EmailSignup from '../../components/EmailSignup.astro';
+import { books, formatNote, type Book } from '../../lib/books';
+import { coverFor } from '../../lib/covers';
+
+export function getStaticPaths() {
+  return books.map((book) => ({ params: { slug: book.slug }, props: { book } }));
+}
+
+interface Props { book: Book; }
+const { book } = Astro.props;
+
+// Optimised cover for the Open Graph tag and JSON-LD image.
+const coverImg = coverFor(book.cover);
+const og = coverImg ? await getImage({ src: coverImg, width: 1200 }) : null;
+const ogPath = og?.src;
+const ogAbsolute = ogPath ? new URL(ogPath, Astro.site).toString() : undefined;
+
+const isPlaceholderDesc = book.description.startsWith('PLACEHOLDER');
+const published = book.status !== 'unpublished';
+const hasAmazon = published && book.amazon_url.length > 0;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Book',
+  name: book.title,
+  ...(book.subtitle ? { alternativeHeadline: book.subtitle } : {}),
+  author: { '@type': 'Person', name: 'Eric McLean' },
+  publisher: { '@type': 'Organization', name: 'Murmmers Press' },
+  inLanguage: 'en-GB',
+  url: new URL(`/books/${book.slug}/`, Astro.site).toString(),
+  ...(ogAbsolute ? { image: ogAbsolute } : {}),
+  ...(!isPlaceholderDesc ? { description: book.description } : {}),
+};
+---
+
+<Base
+  title={book.title}
+  description={isPlaceholderDesc ? `${book.title}, from Murmmers Press.` : book.description}
+  ogImage={ogPath}
+  type="book"
+>
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(jsonLd)} />
+
+  <section class="wrap">
+    <p style="margin-top:1.5rem"><a class="muted" href="/books/">&larr; All books</a></p>
+    <article class="book-detail">
+      <Cover book={book} widths={[320, 640]} sizes="(max-width: 46rem) 60vw, 20rem" loading="eager" />
+
+      <div>
+        <h1>{book.title}</h1>
+        {book.subtitle && <p class="subtitle">{book.subtitle}</p>}
+
+        {isPlaceholderDesc
+          ? <p class="muted"><em>{book.description}</em></p>
+          : <p class="prose">{book.description}</p>}
+
+        <p class="formatnote">{formatNote(book)}</p>
+
+        {published ? (
+          <div class="buys">
+            {hasAmazon
+              ? <a class="btn" href={book.amazon_url}>Buy on Amazon</a>
+              : <span class="btn disabled" aria-disabled="true">Amazon listing coming soon</span>}
+            <span class="btn disabled" aria-disabled="true">Buy direct from Murmmers, soon</span>
+          </div>
+        ) : (
+          <div class="coming-soon">
+            <span class="eyebrow">The press’s launch title</span>
+            <p>The Petrosphere’s Odyssey is finished, and it will be the first book Murmmers Press releases to the world.</p>
+            <p>Be the first to read it. Leave your email and we will write to you the day it opens.</p>
+            <div style="margin-top:1rem">
+              <EmailSignup heading="Be first to read it" note="One letter, the day The Petrosphere’s Odyssey opens." />
+            </div>
+          </div>
+        )}
+      </div>
+    </article>
+  </section>
+</Base>

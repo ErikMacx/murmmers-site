@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import BookCard from '../components/BookCard.astro';
+import EmailSignup from '../components/EmailSignup.astro';
+import { featured } from '../lib/books';
+---
+
+<Base title="Murmmers Press" type="website">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Independent publisher</p>
+      <h1>Fiction with a healing element</h1>
+      <p class="identity">Quiet books that ask to be read slowly, brought to the world with each one’s own voice intact.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Featured books</h2>
+      <div class="book-grid featured">
+        {featured.map((book, i) => <BookCard book={book} loading={i < 5 ? 'eager' : 'lazy'} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap voice">
+      <p>Every book we publish sounds like itself. We edit to protect that, never to smooth it away. The reward is a small shelf you can trust: stories that stay with you after the light has gone.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <EmailSignup />
+    </div>
+  </section>
+</Base>

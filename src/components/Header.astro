@@ -1,0 +1,15 @@
+---
+const links = [
+  { href: '/books/', label: 'Books' },
+  { href: '/about/', label: 'About' },
+];
+---
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Murmmers <span>Press</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      {links.map((l) => <a href={l.href}>{l.label}</a>)}
+    </nav>
+  </div>
+</header>

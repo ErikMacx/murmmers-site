@@ -1,0 +1,14 @@
+---
+import Cover from './Cover.astro';
+import type { Book } from '../lib/books';
+
+interface Props { book: Book; loading?: 'lazy' | 'eager'; }
+const { book, loading = 'lazy' } = Astro.props;
+---
+
+<a class="book-card" href={`/books/${book.slug}/`}>
+  <Cover book={book} loading={loading} />
+  <h3>{book.title}</h3>
+  {book.subtitle && <span class="by">{book.subtitle}</span>}
+  {book.status === 'unpublished' && <span class="pill">coming soon</span>}
+</a>

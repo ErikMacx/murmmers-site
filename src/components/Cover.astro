@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import { coverFor } from '../lib/covers';
+import type { Book } from '../lib/books';
+
+interface Props {
+  book: Book;
+  widths?: number[];
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
+}
+
+const { book, widths = [240, 480, 720], sizes = '(max-width: 40rem) 45vw, 240px', loading = 'lazy' } = Astro.props;
+const img = coverFor(book.cover);
+---
+
+<div class="cover-frame">
+  {img
+    ? <Image src={img} alt={`Cover of ${book.title}`} widths={widths} sizes={sizes} loading={loading} />
+    : <div class="cover-fallback">{book.title}</div>}
+</div>

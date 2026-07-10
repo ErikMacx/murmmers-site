@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro';
+import BookCard from '../../components/BookCard.astro';
+import { books } from '../../lib/books';
+---
+
+<Base title="Books" description="The full Murmmers Press catalogue: fiction with a healing element.">
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">The catalogue</p>
+      <h1>Books</h1>
+      <p class="prose muted">{books.length} titles. Many are novella length: single-sitting reads, made to be finished in one quiet evening.</p>
+      <div class="book-grid" style="margin-top:2rem">
+        {books.map((book, i) => <BookCard book={book} loading={i < 8 ? 'eager' : 'lazy'} />)}
+      </div>
+    </div>
+  </section>
+</Base>

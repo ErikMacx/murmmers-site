@@ -1,0 +1,20 @@
+---
+// Newsletter capture. No provider is configured yet: the form posts to a
+// placeholder action, clearly marked as a TODO. See PLACEHOLDERS.md.
+interface Props { heading?: string; note?: string; }
+const {
+  heading = 'Stay close to the press',
+  note = 'A quiet letter when a new book arrives. No noise.',
+} = Astro.props;
+---
+
+<div class="signup">
+  <h3>{heading}</h3>
+  <p class="muted">{note}</p>
+  <form action="/newsletter-todo" method="post">
+    <label class="skip" for="email">Email address</label>
+    <input id="email" type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+    <button class="btn" type="submit">Sign up</button>
+  </form>
+  <p class="todo">Placeholder form. The email provider is not wired yet.</p>
+</div>
