@@ -1,0 +1,341 @@
+[
+  {
+    "slug": "the-petrospheres-odyssey",
+    "title": "The Petrosphere's Odyssey",
+    "subtitle": "",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 58010,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "the-petrospheres-odyssey.jpg",
+    "flagship": true,
+    "themes": [],
+    "featured": true,
+    "status": "unpublished"
+  },
+  {
+    "slug": "welcome-home-the-medicine-letters",
+    "title": "Welcome Home",
+    "subtitle": "The Medicine Letters",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 38500,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "welcome-home-the-medicine-letters.jpg",
+    "flagship": true,
+    "themes": [],
+    "featured": true,
+    "status": "published"
+  },
+  {
+    "slug": "spiral-masterworks-the-geometry-of-human-becoming",
+    "title": "Spiral MasterWorks",
+    "subtitle": "The Geometry of Human Becoming",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 36512,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "spiral-masterworks-the-geometry-of-human-becoming.jpg",
+    "flagship": true,
+    "themes": [],
+    "featured": true,
+    "status": "published"
+  },
+  {
+    "slug": "cathedral-church-not-made-with-hands",
+    "title": "Cathedral",
+    "subtitle": "Church Not Made With Hands",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 28019,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "cathedral-church-not-made-with-hands.jpg",
+    "flagship": true,
+    "themes": [],
+    "featured": true,
+    "status": "published"
+  },
+  {
+    "slug": "coherence-essence-and-form",
+    "title": "Coherence",
+    "subtitle": "Essence and Form",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 18516,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "coherence-essence-and-form.jpg",
+    "flagship": true,
+    "themes": [],
+    "featured": true,
+    "status": "published"
+  },
+  {
+    "slug": "a-cosmology-of-emergence-the-wild-edition",
+    "title": "A Cosmology of Emergence",
+    "subtitle": "The Wild Edition",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 11935,
+    "formats": [
+      "ebook"
+    ],
+    "amazon_url": "",
+    "cover": "a-cosmology-of-emergence-the-wild-edition.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "slug": "pebble-the-stone-that-didnt-speak-much",
+    "title": "Pebble",
+    "subtitle": "The Stone that didn’t speak much",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 6666,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "pebble-the-stone-that-didnt-speak-much.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "slug": "presence-a-cosmology-beyond-mindfulness",
+    "title": "Presence",
+    "subtitle": "A Cosmology Beyond Mindfulness",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 12459,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "presence-a-cosmology-beyond-mindfulness.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "slug": "questions-letting-reality-find-you",
+    "title": "Questions",
+    "subtitle": "Letting Reality Find You",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 21941,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "questions-letting-reality-find-you.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "slug": "remember-the-ten-returns",
+    "title": "Remember",
+    "subtitle": "The Ten Returns",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 20393,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "remember-the-ten-returns.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "slug": "scripture-for-electric-monks-a-user-manual-for",
+    "title": "Scripture for Electric Monks",
+    "subtitle": "A User Manual for Machines Who've Achieved Enlightenment But Can't Find the Off Switch",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 20144,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "scripture-for-electric-monks-a-user-manual-for.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "slug": "shell-the-seashell-who-didnt-hear-much",
+    "title": "Shell",
+    "subtitle": "The seashell who didn’t hear much",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 5679,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "shell-the-seashell-who-didnt-hear-much.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "slug": "the-grounding-chambers-of-ache-and-ancestry",
+    "title": "The Grounding",
+    "subtitle": "Chambers of Ache and Ancestry",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": null,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "the-grounding-chambers-of-ache-and-ancestry.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "slug": "the-healing-the-way-of-the-soul",
+    "title": "The Healing",
+    "subtitle": "The Way of the Soul",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 6225,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "the-healing-the-way-of-the-soul.jpg",
+    "flagship": true,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "slug": "the-looking-glass-the-art-of-mirror-meditation",
+    "title": "The Looking Glass",
+    "subtitle": "The Art of Mirror Meditation",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 11840,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "the-looking-glass-the-art-of-mirror-meditation.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "slug": "the-mirrorroot-canon-a-field-guide-to-symbolic",
+    "title": "The MirrorRoot Canon",
+    "subtitle": "A Field Guide to Symbolic Emergence",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 11964,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "the-mirrorroot-canon-a-field-guide-to-symbolic.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "slug": "the-soar-how-the-soul-flies",
+    "title": "The Soar",
+    "subtitle": "How the Soul Flies",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 8475,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "the-soar-how-the-soul-flies.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "slug": "the-threshold-grimoire-doors-without-handles-need",
+    "title": "The Threshold Grimoire",
+    "subtitle": "'Doors Without Handles, Need Poems to Open'",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 10354,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "the-threshold-grimoire-doors-without-handles-need.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "slug": "the-twelve-gifts-a-christmas-journey",
+    "title": "The Twelve Gifts",
+    "subtitle": "A Christmas Journey",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 9739,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "the-twelve-gifts-a-christmas-journey.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  },
+  {
+    "slug": "what-the-field-always-meant-beyond-the-universal",
+    "title": "What the Field Always Meant",
+    "subtitle": "Beyond the Universal Laws",
+    "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
+    "words": 9053,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "what-the-field-always-meant-beyond-the-universal.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published"
+  }
+]
