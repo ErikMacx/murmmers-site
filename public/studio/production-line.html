@@ -335,18 +335,18 @@
 const STAGES = [
   /* phase: editorial */
   {id:"00", key:"00-INTAKE",        row:"row-editorial", title:"Intake",          desc:"Vellum exports become clean Markdown masters under version control.", gateAfter:null},
-  {id:"05", key:"05-AUTHOR-INTENT", row:"row-editorial", title:"Author intent",   desc:"The author states the spirit of the book, its limits and its protections.", gateAfter:{no:"G0", name:"intent approved"}, href:"/studio/intent"},
-  {id:"10", key:"10-ANALYSIS",      row:"row-editorial", title:"Analysis",        desc:"Full read: synopsis, themes, comparables, category and keyword candidates.", gateAfter:{no:"G1", name:"triage: tier + depth"}},
-  {id:"20", key:"20-FINGERPRINT",   row:"row-editorial", title:"Voice fingerprint",desc:"The style guardrail per voice: what this book does, and never does.", gateAfter:{no:"G2", name:"fingerprint approved"}},
-  {id:"30", key:"30-EDIT",          row:"row-editorial", title:"Strong edit",     desc:"Polish, never rewrite. Every change a justified diff. Preservation rate reported.", gateAfter:{no:"G3", name:"manuscript approved"}},
-  {id:"35", key:"35-AUTHOR-REVISION",row:"row-editorial",title:"Author revision", desc:"The author's last open pass. Sovereign changes; then the text locks.", gateAfter:{no:"G3b", name:"text lock"}},
+  {id:"05", key:"05-AUTHOR-INTENT", row:"row-editorial", title:"Author intent",   desc:"The author states the spirit of the book, its limits and its protections.", gateAfter:{no:"G1", name:"intent approved"}, href:"/studio/intent"},
+  {id:"10", key:"10-ANALYSIS",      row:"row-editorial", title:"Analysis",        desc:"Full read: synopsis, themes, comparables, category and keyword candidates.", gateAfter:{no:"G2", name:"triage: tier + depth"}},
+  {id:"20", key:"20-FINGERPRINT",   row:"row-editorial", title:"Voice fingerprint",desc:"The style guardrail per voice: what this book does, and never does.", gateAfter:{no:"G3", name:"fingerprint approved"}},
+  {id:"30", key:"30-EDIT",          row:"row-editorial", title:"Strong edit",     desc:"Polish, never rewrite. Every change a justified diff. Preservation rate reported.", gateAfter:{no:"G4", name:"manuscript approved"}},
+  {id:"35", key:"35-AUTHOR-REVISION",row:"row-editorial",title:"Author revision", desc:"The author's last open pass. Sovereign changes; then the text locks.", gateAfter:{no:"G5", name:"text lock"}},
   /* phase: production */
   {id:"40", key:"40-TYPESET",       row:"row-production", title:"Typeset",        desc:"The Vellum round-trip on the Mac: print PDF and EPUB of the locked text.", gateAfter:null},
-  {id:"50", key:"50-PRODUCTION",    row:"row-production", title:"Production",     desc:"Cover, metadata, price ladder, ISBN, edition plan for every channel.", gateAfter:{no:"G4", name:"proof, cover, price"}},
+  {id:"50", key:"50-PRODUCTION",    row:"row-production", title:"Production",     desc:"Cover, metadata, price ladder, ISBN, edition plan for every channel.", gateAfter:{no:"G6", name:"proof, cover, price (a/b/c)"}},
   /* phase: launch */
-  {id:"60", key:"60-LAUNCH-PREP",   row:"row-launch", title:"Launch prep",        desc:"Blurb wave, ARC wave, creator seeding, content bank, email sequence.", gateAfter:{no:"G5", name:"go / no-go"}},
+  {id:"60", key:"60-LAUNCH-PREP",   row:"row-launch", title:"Launch prep",        desc:"Blurb wave, ARC wave, creator seeding, content bank, email sequence.", gateAfter:{no:"G7", name:"go / no-go"}},
   {id:"70", key:"70-LAUNCH",        row:"row-launch", title:"Launch",             desc:"The coordinated week: creators, email, daily content, direct-store push.", gateAfter:null},
-  {id:"80", key:"80-MOMENTUM",      row:"row-launch", title:"Momentum",           desc:"Six to twelve weeks of cadence, review accumulation and threshold triggers.", gateAfter:{no:"G6", name:"pivot (flagships)"}},
+  {id:"80", key:"80-MOMENTUM",      row:"row-launch", title:"Momentum",           desc:"Six to twelve weeks of cadence, review accumulation and threshold triggers.", gateAfter:{no:"G8", name:"pivot (flagships)"}},
   /* phase: backlist */
   {id:"90", key:"90-EVERGREEN",     row:"row-backlist", title:"Evergreen",        desc:"Bundles, seasonal activations, cross-promotion from every newer launch.", gateAfter:null, terminal:true},
 ];
@@ -358,26 +358,26 @@ const CHANNELS = [
 ];
 
 const BOOKS = [
-  {slug:"the-petrospheres-odyssey", title:"The Petrosphere's Odyssey", stage:"00-INTAKE", flagship:true},
+  {slug:"the-petrospheres-odyssey", title:"The Petrosphere's Odyssey", stage:"10-ANALYSIS", flagship:true},
   {slug:"welcome-home-the-medicine-letters", title:"Welcome Home", stage:"00-INTAKE", flagship:true},
-  {slug:"spiral-masterworks", title:"Spiral Masterworks", stage:"00-INTAKE", flagship:true},
+  {slug:"spiral-masterworks-the-geometry-of-human-becoming", title:"Spiral MasterWorks", stage:"00-INTAKE", flagship:true},
   {slug:"cathedral-church-not-made-with-hands", title:"Cathedral", stage:"00-INTAKE", flagship:true},
-  {slug:"questions-letting-reality-find-you", title:"Questions", stage:"00-INTAKE"},
-  {slug:"remember-the-ten-returns", title:"Remember: The Ten Returns", stage:"00-INTAKE"},
-  {slug:"scripture-for-electric-monks", title:"Scripture for Electric Monks", stage:"00-INTAKE"},
-  {slug:"the-grounding-chambers-of-ache-and-ancestry", title:"The Grounding", stage:"00-INTAKE"},
   {slug:"coherence-essence-and-form", title:"Coherence", stage:"00-INTAKE", flagship:true},
-  {slug:"presence-a-cosmology-beyond-mindfulness", title:"Presence", stage:"00-INTAKE"},
-  {slug:"the-mirrorroot-canon", title:"The MirrorRoot Canon", stage:"00-INTAKE"},
-  {slug:"the-looking-glass", title:"The Looking Glass", stage:"00-INTAKE"},
   {slug:"a-cosmology-of-emergence-the-wild-edition", title:"A Cosmology of Emergence", stage:"00-INTAKE"},
-  {slug:"the-threshold-grimoire", title:"The Threshold Grimoire", stage:"00-INTAKE"},
-  {slug:"what-the-field-always-meant", title:"What the Field Always Meant", stage:"00-INTAKE"},
-  {slug:"the-twelve-gifts-a-christmas-journey", title:"The Twelve Gifts", stage:"00-INTAKE"},
-  {slug:"the-soar-how-the-soul-flies", title:"The Soar", stage:"00-INTAKE"},
-  {slug:"the-healing-the-way-of-the-soul", title:"The Healing: The Way of the Soul", stage:"00-INTAKE"},
-  {slug:"pebble-the-stone-that-didnt-speak-much", title:"Pebble", stage:"10-ANALYSIS"},
+  {slug:"pebble-the-stone-that-didnt-speak-much", title:"Pebble", stage:"20-FINGERPRINT"},
+  {slug:"presence-a-cosmology-beyond-mindfulness", title:"Presence", stage:"00-INTAKE"},
+  {slug:"questions-letting-reality-find-you", title:"Questions", stage:"00-INTAKE"},
+  {slug:"remember-the-ten-returns", title:"Remember", stage:"00-INTAKE"},
+  {slug:"scripture-for-electric-monks-a-user-manual-for", title:"Scripture for Electric Monks", stage:"00-INTAKE"},
   {slug:"shell-the-seashell-who-didnt-hear-much", title:"Shell", stage:"00-INTAKE"},
+  {slug:"the-grounding-chambers-of-ache-and-ancestry", title:"The Grounding", stage:"00-INTAKE"},
+  {slug:"the-healing-the-way-of-the-soul", title:"The Healing", stage:"00-INTAKE", flagship:true},
+  {slug:"the-looking-glass-the-art-of-mirror-meditation", title:"The Looking Glass", stage:"00-INTAKE"},
+  {slug:"the-mirrorroot-canon-a-field-guide-to-symbolic", title:"The MirrorRoot Canon", stage:"00-INTAKE"},
+  {slug:"the-soar-how-the-soul-flies", title:"The Soar", stage:"00-INTAKE"},
+  {slug:"the-threshold-grimoire-doors-without-handles-need", title:"The Threshold Grimoire", stage:"00-INTAKE"},
+  {slug:"the-twelve-gifts-a-christmas-journey", title:"The Twelve Gifts", stage:"00-INTAKE"},
+  {slug:"what-the-field-always-meant-beyond-the-universal", title:"What the Field Always Meant", stage:"00-INTAKE"},
 ];
 
 /* ============================================================ */
