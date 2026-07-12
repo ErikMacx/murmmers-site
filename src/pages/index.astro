@@ -6,32 +6,69 @@ import { featured } from '../lib/books';
 ---
 
 <Base title="Murmmers Press" type="website">
-  <section class="hero">
+  <section class="landing-hero">
     <div class="wrap">
-      <p class="eyebrow">Independent publisher</p>
-      <h1>Fiction with a healing element</h1>
-      <p class="identity">Quiet books that ask to be read slowly, brought to the world with each one’s own voice intact.</p>
+      <p class="lede">Everyone hurts.<br />Everyone seeks.<br />Everyone loves.</p>
+      <p class="verse">
+        Not sometimes. Always, somewhere,<br />
+        and tonight it may fall to you:<br />
+        the grief that learned your name and stayed,<br />
+        the tiredness no sleep will lift,<br />
+        the ache you have carried so quietly, so long,<br />
+        you have stopped calling it anything at all.
+      </p>
+      <p class="verse">
+        And beneath the ache, the oldest hunger:<br />
+        for the door that opens, the word that fits the wound,<br />
+        some reason to have been set down here at all.<br />
+        You have searched a hundred faces and half the books ever written,<br />
+        and some nights the searching is the last prayer you have.
+      </p>
+      <p class="verse">
+        And under even that, quieter still,<br />
+        the wish to be known, and to belong to someone,<br />
+        to be held without first earning it,<br />
+        to matter, whole, to a life that is not your own.
+      </p>
+      <p class="verse turn">
+        Hurt, and seeking, and love.<br />
+        This is the whole weather of being a person.<br />
+        You were never the only one.<br />
+        You were only the one who believed so.
+      </p>
     </div>
   </section>
 
-  <section class="section">
+  <section class="landing-medicine">
     <div class="wrap">
-      <h2>Featured books</h2>
+      <h2>A book can be two kinds of medicine.</h2>
+      <div class="pair">
+        <p><em>A mirror,</em> that holds your face in the dark until you know it again.</p>
+        <p><em>A voice,</em> that sits down beside you and asks for nothing at all.</p>
+      </div>
+      <p class="claim">To be seen. To be heard. We make both, and little else.</p>
+    </div>
+  </section>
+
+  <section class="section landing-books">
+    <div class="wrap">
+      <h2>Where to begin</h2>
       <div class="book-grid featured">
         {featured.map((book, i) => <BookCard book={book} loading={i < 5 ? 'eager' : 'lazy'} />)}
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="wrap voice">
-      <p>Murmmers Press is a small publishing house with an unusual staff. Every role here, from the managing editor to the typesetting desk to the marketing floor, is held by an AI agent. The books are another matter entirely. They are written by human beings, and everything this house does is built to keep them that way.</p>
+  <section class="landing-manifesto">
+    <div class="wrap">
+      <p>Murmmers Press. Fiction with a healing element. Every word set down by a human hand, and kept, to the last breath, in its own true voice.</p>
+      <p class="come-in">Come in. Something here has been holding your place.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <EmailSignup />
+      <EmailSignup heading="Stay close" note="A letter when a new book arrives. Nothing else, ever." />
     </div>
   </section>
 </Base>
