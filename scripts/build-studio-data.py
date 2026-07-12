@@ -17,21 +17,36 @@ HTML = os.path.join(SITE, "public", "studio", "production-line.html")
 
 books = json.load(open(os.path.join(SITE, "src", "data", "books.json"), encoding="utf-8"))
 
+def field(txt, name):
+    m = re.search(rf"^\s*{name}:\s*(.+)$", txt, re.M)
+    return m.group(1).strip() if m else ""
+
 entries = []
 for b in books:
     slug = b["slug"]
-    stage = "00-INTAKE"
+    stage, gate_pending, owner, next_action = "00-INTAKE", "", "", ""
     state_path = os.path.join(PRESS, "books", slug, "STATE.md")
     if os.path.exists(state_path):
-        m = re.search(r"^\s*stage:\s*(\S+)", open(state_path, encoding="utf-8").read(), re.M)
+        txt = open(state_path, encoding="utf-8").read()
+        m = re.search(r"^\s*stage:\s*(\S+)", txt, re.M)
         if m:
             stage = m.group(1)
-    entries.append((slug, b["title"], stage, bool(b.get("flagship"))))
+        gate_pending = field(txt, "gate_pending")
+        owner = field(txt, "owner")
+        next_action = field(txt, "next_action")
+    entries.append((slug, b["title"], stage, bool(b.get("flagship")), gate_pending, owner, next_action))
 
 rows = ["const BOOKS = ["]
-for slug, title, stage, flagship in entries:
+for slug, title, stage, flagship, gate_pending, owner, next_action in entries:
     flag = ", flagship:true" if flagship else ""
-    rows.append(f"  {{slug:{json.dumps(slug)}, title:{json.dumps(title)}, stage:{json.dumps(stage)}{flag}}},")
+    extra = ""
+    if owner:
+        extra += f", owner:{json.dumps(owner)}"
+    if gate_pending and gate_pending.lower() != "none":
+        extra += f", gate:{json.dumps(gate_pending)}"
+    if next_action:
+        extra += f", next:{json.dumps(next_action)}"
+    rows.append(f"  {{slug:{json.dumps(slug)}, title:{json.dumps(title)}, stage:{json.dumps(stage)}{flag}{extra}}},")
 rows.append("];")
 new_books = "\n".join(rows)
 
@@ -57,6 +72,8 @@ for old, new in gate_fixes:
 open(HTML, "w", encoding="utf-8").write(html)
 
 counts = {}
-for _, _, stage, _ in entries:
-    counts[stage] = counts.get(stage, 0) + 1
+for e in entries:
+    counts[e[2]] = counts.get(e[2], 0) + 1
+desk = [e[1] for e in entries if e[5] == "publisher"]
 print(f"refreshed {len(entries)} books; stages: {counts}")
+print(f"on the publisher's desk ({len(desk)}): {', '.join(desk) if desk else 'nothing'}")

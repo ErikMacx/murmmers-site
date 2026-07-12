@@ -243,6 +243,35 @@
   }
   .drawer .openlink.disabled{background:var(--paper-deep);color:var(--ink-soft);pointer-events:none;border:1px dashed var(--line)}
 
+  /* ---------- on your desk ---------- */
+  .desk{
+    background:var(--amber-soft);border-bottom:1px solid var(--line);
+    padding:.85rem 1.5rem 1rem;
+  }
+  .desk-head{
+    font-family:"Spline Sans Mono",monospace;font-size:.7rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--amber);margin-bottom:.6rem;
+  }
+  .desk-items{display:flex;gap:.8rem;flex-wrap:wrap}
+  .desk-item{
+    background:white;border:1px solid var(--amber);border-radius:10px;
+    padding:.6rem .8rem;min-width:15rem;max-width:23rem;cursor:pointer;
+    box-shadow:var(--shadow);text-align:left;font:inherit;color:inherit;
+  }
+  .desk-item:hover{border-color:var(--madder)}
+  .desk-item .di-top{display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem}
+  .desk-item .di-gate{
+    font-family:"Spline Sans Mono",monospace;font-size:.66rem;font-weight:500;
+    background:var(--amber);color:white;border-radius:4px;padding:.08rem .4rem;flex:none;
+  }
+  .desk-item .di-stage{
+    font-family:"Spline Sans Mono",monospace;font-size:.6rem;color:var(--ink-soft);
+    letter-spacing:.05em;text-transform:uppercase;flex:none;
+  }
+  .desk-item .di-title{font-family:"Fraunces",serif;font-weight:600;font-size:1.02rem;line-height:1.1}
+  .desk-item .di-next{font-size:.8rem;line-height:1.4;color:var(--ink-soft)}
+  .desk-empty{font-style:italic;color:var(--ink-soft);font-size:.9rem}
+
   footer{
     padding:1rem 1.5rem 2rem;font-size:.78rem;color:var(--ink-soft);
     font-family:"Spline Sans Mono",monospace;
@@ -270,6 +299,11 @@
   </nav>
   <div class="counts" id="counts" aria-label="Books at each stage"></div>
 </header>
+
+<section class="desk" id="desk" aria-label="Awaiting your decision">
+  <div class="desk-head">On your desk · awaiting you</div>
+  <div class="desk-items" id="desk-items"></div>
+</section>
 
 <div class="viewport" id="viewport" tabindex="0" aria-label="Production line, scrolls horizontally">
   <div class="canvas" id="canvas">
@@ -358,26 +392,26 @@ const CHANNELS = [
 ];
 
 const BOOKS = [
-  {slug:"the-petrospheres-odyssey", title:"The Petrosphere's Odyssey", stage:"10-ANALYSIS", flagship:true},
-  {slug:"welcome-home-the-medicine-letters", title:"Welcome Home", stage:"00-INTAKE", flagship:true},
-  {slug:"spiral-masterworks-the-geometry-of-human-becoming", title:"Spiral MasterWorks", stage:"00-INTAKE", flagship:true},
-  {slug:"cathedral-church-not-made-with-hands", title:"Cathedral", stage:"00-INTAKE", flagship:true},
-  {slug:"coherence-essence-and-form", title:"Coherence", stage:"00-INTAKE", flagship:true},
-  {slug:"a-cosmology-of-emergence-the-wild-edition", title:"A Cosmology of Emergence", stage:"00-INTAKE"},
-  {slug:"pebble-the-stone-that-didnt-speak-much", title:"Pebble", stage:"20-FINGERPRINT"},
-  {slug:"presence-a-cosmology-beyond-mindfulness", title:"Presence", stage:"00-INTAKE"},
-  {slug:"questions-letting-reality-find-you", title:"Questions", stage:"00-INTAKE"},
-  {slug:"remember-the-ten-returns", title:"Remember", stage:"00-INTAKE"},
-  {slug:"scripture-for-electric-monks-a-user-manual-for", title:"Scripture for Electric Monks", stage:"00-INTAKE"},
-  {slug:"shell-the-seashell-who-didnt-hear-much", title:"Shell", stage:"00-INTAKE"},
-  {slug:"the-grounding-chambers-of-ache-and-ancestry", title:"The Grounding", stage:"00-INTAKE"},
-  {slug:"the-healing-the-way-of-the-soul", title:"The Healing", stage:"00-INTAKE", flagship:true},
-  {slug:"the-looking-glass-the-art-of-mirror-meditation", title:"The Looking Glass", stage:"00-INTAKE"},
-  {slug:"the-mirrorroot-canon-a-field-guide-to-symbolic", title:"The MirrorRoot Canon", stage:"00-INTAKE"},
-  {slug:"the-soar-how-the-soul-flies", title:"The Soar", stage:"00-INTAKE"},
-  {slug:"the-threshold-grimoire-doors-without-handles-need", title:"The Threshold Grimoire", stage:"00-INTAKE"},
-  {slug:"the-twelve-gifts-a-christmas-journey", title:"The Twelve Gifts", stage:"00-INTAKE"},
-  {slug:"what-the-field-always-meant-beyond-the-universal", title:"What the Field Always Meant", stage:"00-INTAKE"},
+  {slug:"the-petrospheres-odyssey", title:"The Petrosphere's Odyssey", stage:"40-TYPESET", flagship:true, owner:"publisher", next:"publisher performs the Vellum typeset on the Mac (import typeset/petrospheres-odyssey-import.docx, style pass per typeset/CHECKLIST.md, export print PDF and EPUB into assets/). Cover rebuild runs in parallel at stage 50"},
+  {slug:"welcome-home-the-medicine-letters", title:"Welcome Home", stage:"20-FINGERPRINT", flagship:true, owner:"publisher", gate:"G3 (fingerprint approval)", next:"publisher approves Gate 3; then stage 30 EDIT (mechanical pass + differentiation + front-matter corrections, all Fable 5 / ME as scoped, approved diffs)"},
+  {slug:"spiral-masterworks-the-geometry-of-human-becoming", title:"Spiral MasterWorks", stage:"00-INTAKE", flagship:true, owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"cathedral-church-not-made-with-hands", title:"Cathedral", stage:"00-INTAKE", flagship:true, owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"coherence-essence-and-form", title:"Coherence", stage:"00-INTAKE", flagship:true, owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"a-cosmology-of-emergence-the-wild-edition", title:"A Cosmology of Emergence", stage:"00-INTAKE", owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"pebble-the-stone-that-didnt-speak-much", title:"Pebble", stage:"20-FINGERPRINT", owner:"ME", next:"build the voice fingerprint per voice; blocked until the session is pinned to claude-fable-5"},
+  {slug:"presence-a-cosmology-beyond-mindfulness", title:"Presence", stage:"00-INTAKE", owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"questions-letting-reality-find-you", title:"Questions", stage:"00-INTAKE", owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"remember-the-ten-returns", title:"Remember", stage:"00-INTAKE", owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"scripture-for-electric-monks-a-user-manual-for", title:"Scripture for Electric Monks", stage:"00-INTAKE", owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"shell-the-seashell-who-didnt-hear-much", title:"Shell", stage:"00-INTAKE", owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"the-grounding-chambers-of-ache-and-ancestry", title:"The Grounding", stage:"00-INTAKE", owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"the-healing-the-way-of-the-soul", title:"The Healing", stage:"00-INTAKE", flagship:true, owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"the-looking-glass-the-art-of-mirror-meditation", title:"The Looking Glass", stage:"00-INTAKE", owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"the-mirrorroot-canon-a-field-guide-to-symbolic", title:"The MirrorRoot Canon", stage:"00-INTAKE", owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"the-soar-how-the-soul-flies", title:"The Soar", stage:"00-INTAKE", owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"the-threshold-grimoire-doors-without-handles-need", title:"The Threshold Grimoire", stage:"00-INTAKE", owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"the-twelve-gifts-a-christmas-journey", title:"The Twelve Gifts", stage:"00-INTAKE", owner:"publisher", next:"publisher to author intent.md (stage 05)"},
+  {slug:"what-the-field-always-meant-beyond-the-universal", title:"What the Field Always Meant", stage:"00-INTAKE", owner:"publisher", next:"publisher to author intent.md (stage 05)"},
 ];
 
 /* ============================================================ */
@@ -501,6 +535,57 @@ STAGES.forEach((s, i) => {
     chip.scrollIntoView({behavior:"smooth", inline:"center", block:"center"});
     chip.classList.remove("pulse"); void chip.offsetWidth; chip.classList.add("pulse");
   });
+})();
+
+/* on your desk: active publisher decisions as cards (gated first);
+   the intake backlog is one summary line, not 17 cards. */
+(function(){
+  const wrap = document.getElementById("desk-items");
+  const active = BOOKS.filter(b => b.owner === "publisher" && b.stage !== "00-INTAKE")
+                      .sort((a,b) => (b.gate?1:0) - (a.gate?1:0));
+  const backlog = BOOKS.filter(b => b.stage === "00-INTAKE").length;
+
+  const focus = slug => {
+    const chip = document.getElementById("chip-" + slug);
+    if (!chip) return;
+    chip.scrollIntoView({behavior:"smooth", inline:"center", block:"center"});
+    chip.classList.remove("pulse"); void chip.offsetWidth; chip.classList.add("pulse");
+  };
+
+  if (!active.length && !backlog){
+    wrap.innerHTML = '<div class="desk-empty">Nothing waiting on you right now.</div>';
+    return;
+  }
+
+  active.forEach(b => {
+    const m = b.gate && b.gate.match(/^(G\d[a-c]?)/);
+    const gateNo = m ? m[1] : null;
+    const el = document.createElement("button");
+    el.className = "desk-item";
+    el.innerHTML = `
+      <div class="di-top">
+        ${gateNo ? `<span class="di-gate">${gateNo}</span>` : `<span class="di-stage">${b.stage}</span>`}
+        <span class="di-title">${b.title}</span>
+      </div>
+      <div class="di-next">${b.next || "Awaiting your decision."}</div>`;
+    el.addEventListener("click", () => focus(b.slug));
+    wrap.appendChild(el);
+  });
+
+  if (backlog){
+    const el = document.createElement("button");
+    el.className = "desk-item";
+    el.innerHTML = `
+      <div class="di-top">
+        <span class="di-stage">Backlog</span>
+        <span class="di-title">${backlog} titles waiting to begin</span>
+      </div>
+      <div class="di-next">Ingested at intake, awaiting your author intent (stage 05) to enter the line.</div>`;
+    el.addEventListener("click", () => {
+      document.getElementById("stage-05").scrollIntoView({behavior:"smooth", inline:"center", block:"nearest"});
+    });
+    wrap.appendChild(el);
+  }
 })();
 
 /* phase jumps */
