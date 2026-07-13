@@ -271,3 +271,10 @@ p { margin: 0 0 1rem; }
 .pl-legend .sw.bk { background: #5e7a4f; border-color: #5e7a4f; }
 .pl-legend .sw.ga { background: #b4832f; border-color: #b4832f; border-radius: 50%; }
 .pl-legend .pl-hint { font-style: italic; opacity: .85; }
+#pl-tip {
+  position: fixed; left: 0; top: 0; z-index: 60; pointer-events: none; max-width: 22rem;
+  background: var(--ink); color: var(--paper); padding: .5rem .7rem; border-radius: 8px;
+  font-family: var(--font-body); font-size: .85rem; line-height: 1.4; box-shadow: var(--shadow);
+  opacity: 0; transition: opacity .12s ease;
+}
+#pl-tip.on { opacity: 1; }
