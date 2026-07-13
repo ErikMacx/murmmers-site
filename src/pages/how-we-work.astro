@@ -42,6 +42,129 @@ import Base from '../layouts/Base.astro';
     </div>
   </section>
 
+  <section class="how-section">
+    <div class="wrap">
+      <h2>The line, end to end</h2>
+      <p class="pl-intro">Twelve stages, from a raw manuscript to an evergreen backlist title, run as a loop that never tires. The amber seals are the eight gates: the points where the line stops and a human decides. Hover any stage to see what it does.</p>
+      <figure class="pipeline">
+        <svg class="pl-svg" viewBox="0 0 960 560" role="img" aria-labelledby="pl-title pl-desc">
+          <title id="pl-title">The Murmmers production line</title>
+          <desc id="pl-desc">Twelve stages from intake to evergreen, snaking across three rows, with eight amber gates marking where a human decides.</desc>
+          <defs>
+            <marker id="plarw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M0,0 L10,5 L0,10 z" fill="#9a9184" />
+            </marker>
+          </defs>
+          <g fill="none" stroke="#9a9184" stroke-width="2.5" marker-end="url(#plarw)">
+            <line x1="228" y1="90" x2="272" y2="90" />
+            <line x1="458" y1="90" x2="502" y2="90" />
+            <line x1="688" y1="90" x2="732" y2="90" />
+            <line x1="825" y1="121" x2="825" y2="259" />
+            <line x1="732" y1="290" x2="688" y2="290" />
+            <line x1="502" y1="290" x2="458" y2="290" />
+            <line x1="272" y1="290" x2="228" y2="290" />
+            <line x1="135" y1="321" x2="135" y2="459" />
+            <line x1="228" y1="490" x2="272" y2="490" />
+            <line x1="458" y1="490" x2="502" y2="490" />
+            <line x1="688" y1="490" x2="732" y2="490" />
+          </g>
+          <g>
+            <g class="pl-node">
+              <title>Intake — Vellum exports become clean Markdown masters under version control.</title>
+              <rect x="42" y="59" width="186" height="62" rx="10" fill="#e6efeb" stroke="#2b6a5b" stroke-width="2" />
+              <text x="135" y="84" text-anchor="middle" font-family="'SF Mono',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#2b6a5b">00</text>
+              <text x="135" y="104" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#2a2520">Intake</text>
+            </g>
+            <g class="pl-node">
+              <title>Author intent — The author states the spirit of the book, its limits and its protections.</title>
+              <rect x="272" y="59" width="186" height="62" rx="10" fill="#e6efeb" stroke="#2b6a5b" stroke-width="2" />
+              <text x="365" y="84" text-anchor="middle" font-family="'SF Mono',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#2b6a5b">05</text>
+              <text x="365" y="104" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#2a2520">Author intent</text>
+            </g>
+            <g class="pl-node">
+              <title>Analysis — Full read: synopsis, themes, comparables, category and keyword candidates.</title>
+              <rect x="502" y="59" width="186" height="62" rx="10" fill="#e6efeb" stroke="#2b6a5b" stroke-width="2" />
+              <text x="595" y="84" text-anchor="middle" font-family="'SF Mono',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#2b6a5b">10</text>
+              <text x="595" y="104" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#2a2520">Analysis</text>
+            </g>
+            <g class="pl-node">
+              <title>Voice fingerprint — The style guardrail, one per voice: what this book does, and never does.</title>
+              <rect x="732" y="59" width="186" height="62" rx="10" fill="#e6efeb" stroke="#2b6a5b" stroke-width="2" />
+              <text x="825" y="84" text-anchor="middle" font-family="'SF Mono',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#2b6a5b">20</text>
+              <text x="825" y="104" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#2a2520">Voice fingerprint</text>
+            </g>
+            <g class="pl-node">
+              <title>Strong edit — Polish, never rewrite. Every change a justified diff, with a preservation rate.</title>
+              <rect x="732" y="259" width="186" height="62" rx="10" fill="#e6efeb" stroke="#2b6a5b" stroke-width="2" />
+              <text x="825" y="284" text-anchor="middle" font-family="'SF Mono',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#2b6a5b">30</text>
+              <text x="825" y="304" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#2a2520">Strong edit</text>
+            </g>
+            <g class="pl-node">
+              <title>Author revision — The author's last open pass. Sovereign changes; then the text locks.</title>
+              <rect x="502" y="259" width="186" height="62" rx="10" fill="#e6efeb" stroke="#2b6a5b" stroke-width="2" />
+              <text x="595" y="284" text-anchor="middle" font-family="'SF Mono',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#2b6a5b">35</text>
+              <text x="595" y="304" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#2a2520">Author revision</text>
+            </g>
+            <g class="pl-node">
+              <title>Typeset — The Vellum round-trip on the Mac: print PDF and EPUB of the locked text.</title>
+              <rect x="272" y="259" width="186" height="62" rx="10" fill="#e7ecf3" stroke="#3f5c7a" stroke-width="2" />
+              <text x="365" y="284" text-anchor="middle" font-family="'SF Mono',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#3f5c7a">40</text>
+              <text x="365" y="304" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#2a2520">Typeset</text>
+            </g>
+            <g class="pl-node">
+              <title>Production — Cover, metadata, price ladder, ISBN and an edition plan for every channel.</title>
+              <rect x="42" y="259" width="186" height="62" rx="10" fill="#e7ecf3" stroke="#3f5c7a" stroke-width="2" />
+              <text x="135" y="284" text-anchor="middle" font-family="'SF Mono',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#3f5c7a">50</text>
+              <text x="135" y="304" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#2a2520">Production</text>
+            </g>
+            <g class="pl-node">
+              <title>Launch prep — Blurb wave, ARC wave, creator seeding, content bank, email sequence.</title>
+              <rect x="42" y="459" width="186" height="62" rx="10" fill="#f5e7e2" stroke="#a24e3b" stroke-width="2" />
+              <text x="135" y="484" text-anchor="middle" font-family="'SF Mono',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#a24e3b">60</text>
+              <text x="135" y="504" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#2a2520">Launch prep</text>
+            </g>
+            <g class="pl-node">
+              <title>Launch — The coordinated week: creators, email, daily content, direct-store push.</title>
+              <rect x="272" y="459" width="186" height="62" rx="10" fill="#f5e7e2" stroke="#a24e3b" stroke-width="2" />
+              <text x="365" y="484" text-anchor="middle" font-family="'SF Mono',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#a24e3b">70</text>
+              <text x="365" y="504" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#2a2520">Launch</text>
+            </g>
+            <g class="pl-node">
+              <title>Momentum — Six to twelve weeks of cadence, reviews accumulating, threshold triggers.</title>
+              <rect x="502" y="459" width="186" height="62" rx="10" fill="#f5e7e2" stroke="#a24e3b" stroke-width="2" />
+              <text x="595" y="484" text-anchor="middle" font-family="'SF Mono',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#a24e3b">80</text>
+              <text x="595" y="504" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#2a2520">Momentum</text>
+            </g>
+            <g class="pl-node">
+              <title>Evergreen — Backlist for good: bundles, seasonal activations, cross-promotion from every new launch.</title>
+              <rect x="732" y="459" width="186" height="62" rx="10" fill="#e9efe3" stroke="#5e7a4f" stroke-width="2" stroke-dasharray="4 3" />
+              <text x="825" y="484" text-anchor="middle" font-family="'SF Mono',Menlo,monospace" font-size="10" letter-spacing="1.5" fill="#5e7a4f">90</text>
+              <text x="825" y="504" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#2a2520">Evergreen</text>
+            </g>
+          </g>
+          <g font-family="'SF Mono',Menlo,monospace" font-size="11.5" font-weight="500" text-anchor="middle">
+            <g class="pl-gate"><title>G1 · intent approved · a publisher decision</title><circle cx="480" cy="90" r="16.5" fill="#b4832f" /><text x="480" y="94" fill="#fff">G1</text></g>
+            <g class="pl-gate"><title>G2 · triage: tier, depth and cover · a publisher decision</title><circle cx="710" cy="90" r="16.5" fill="#b4832f" /><text x="710" y="94" fill="#fff">G2</text></g>
+            <g class="pl-gate"><title>G3 · fingerprint approved · a publisher decision</title><circle cx="825" cy="190" r="16.5" fill="#b4832f" /><text x="825" y="194" fill="#fff">G3</text></g>
+            <g class="pl-gate"><title>G4 · manuscript approved · a publisher decision</title><circle cx="710" cy="290" r="16.5" fill="#b4832f" /><text x="710" y="294" fill="#fff">G4</text></g>
+            <g class="pl-gate"><title>G5 · text lock · a publisher decision</title><circle cx="480" cy="290" r="16.5" fill="#b4832f" /><text x="480" y="294" fill="#fff">G5</text></g>
+            <g class="pl-gate"><title>G6 · proof, cover, price (a/b/c) · a publisher decision</title><circle cx="135" cy="390" r="16.5" fill="#b4832f" /><text x="135" y="394" fill="#fff">G6</text></g>
+            <g class="pl-gate"><title>G7 · launch go / no-go · a publisher decision</title><circle cx="250" cy="490" r="16.5" fill="#b4832f" /><text x="250" y="494" fill="#fff">G7</text></g>
+            <g class="pl-gate"><title>G8 · pivot for flagships · a publisher decision</title><circle cx="710" cy="490" r="16.5" fill="#b4832f" /><text x="710" y="494" fill="#fff">G8</text></g>
+          </g>
+        </svg>
+        <figcaption class="pl-legend">
+          <span class="k"><span class="sw ed"></span> Editorial</span>
+          <span class="k"><span class="sw pr"></span> Production</span>
+          <span class="k"><span class="sw la"></span> Launch</span>
+          <span class="k"><span class="sw bk"></span> Backlist</span>
+          <span class="k"><span class="sw ga"></span> Gate · a human decides</span>
+          <span class="k pl-hint">Hover any stage for what it does</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
   <section class="how-section how-gates">
     <div class="wrap">
       <h2>Every door is opened by a human</h2>

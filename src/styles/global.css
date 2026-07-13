@@ -1,7 +1,8 @@
 /* Murmmers site design system.
-   Calm, literary, warm. Typography-led, mobile-first. The covers carry the
-   colour; the site stays quiet around them. House style in copy: en-GB, no em
-   dashes, sentence-case headings. */
+   Calm, literary, warm. Typography-led, mobile-first. A muted accent trio breathes
+   life into the paper: pine (healing), madder (the human warmth), ochre (the light);
+   body text stays ink on warm paper for readability. House style in copy: en-GB, no
+   em dashes, sentence-case headings. */
 
 :root {
   --paper: #f7f5f0;
@@ -9,8 +10,15 @@
   --card: #ffffff;
   --ink: #2a2520;
   --ink-soft: #6b6459;
-  --accent: #2e6b5e;        /* one deep accent, used sparingly */
-  --accent-deep: #234f45;
+  --accent: #2f6b5d;        /* pine — healing, calm; the primary accent */
+  --accent-deep: #244f45;
+  --warm: #a24e3b;          /* madder/terracotta — grounding, comfort, the human warmth */
+  --warm-deep: #833c2c;
+  --gold: #9a6a24;          /* muted ochre — the light; used sparingly */
+  --gold-deep: #7c541c;
+  --pine-wash: color-mix(in srgb, var(--accent) 7%, var(--paper));
+  --warm-wash: color-mix(in srgb, var(--warm) 8%, var(--paper));
+  --gold-wash: color-mix(in srgb, var(--gold) 9%, var(--paper));
   --line: #ddd8cc;
   --shadow: 0 1px 2px rgba(42, 37, 32, .06), 0 6px 20px rgba(42, 37, 32, .06);
 
@@ -168,10 +176,13 @@ p { margin: 0 0 1rem; }
   font-size: clamp(1.4rem, 3.8vw, 2.3rem); line-height: 1.42; max-width: 30rem;
 }
 .landing-hero .verse.turn { margin-top: 1.5em; font-style: italic; color: var(--accent-deep); }
+.landing-hero .lede .l1 { color: var(--warm-deep); }
+.landing-hero .lede .l2 { color: var(--gold-deep); }
+.landing-hero .lede .l3 { color: var(--accent-deep); }
 
 .landing-medicine {
   padding-block: clamp(3rem, 8vw, 5.5rem);
-  border-block: 1px solid var(--line); background: var(--paper-deep);
+  border-block: 1px solid var(--line); background: var(--pine-wash);
 }
 .landing-medicine h2 {
   font-size: clamp(1.9rem, 5.5vw, 3.4rem); line-height: 1.05; max-width: 16ch;
@@ -207,7 +218,7 @@ p { margin: 0 0 1rem; }
   max-width: 36rem; margin-top: clamp(1.2rem, 3.5vw, 2rem);
 }
 
-.how-pull { padding-block: clamp(2.5rem, 7vw, 4.5rem); border-block: 1px solid var(--line); background: var(--paper-deep); }
+.how-pull { padding-block: clamp(2.5rem, 7vw, 4.5rem); border-block: 1px solid var(--line); background: var(--warm-wash); }
 .how-pull .big {
   font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 6.5vw, 3.6rem);
   line-height: 1.04; letter-spacing: -.02em; margin: 0 0 clamp(1rem, 3vw, 1.6rem);
@@ -227,7 +238,7 @@ p { margin: 0 0 1rem; }
 .how-gates p + p { margin-top: 1em; }
 .how-gates .kicker { color: var(--accent-deep); font-style: italic; }
 
-.how-writers { padding-block: clamp(2.5rem, 7vw, 4.5rem); border-block: 1px solid var(--line); background: var(--paper-deep); }
+.how-writers { padding-block: clamp(2.5rem, 7vw, 4.5rem); border-block: 1px solid var(--line); background: var(--gold-wash); }
 .how-writers h2 { font-size: clamp(1.6rem, 4.5vw, 2.4rem); margin-bottom: 1.2rem; }
 .how-writers p { font-family: var(--font-display); font-size: clamp(1.15rem, 2.6vw, 1.5rem); line-height: 1.5; max-width: 40rem; }
 
@@ -239,3 +250,24 @@ p { margin: 0 0 1rem; }
   font-size: clamp(1.15rem, 2.6vw, 1.5rem); line-height: 1.45; color: var(--accent-deep); max-width: 40rem;
 }
 .how-writers .come-in { font-style: italic; color: var(--accent-deep); }
+
+/* production-line graphic (how we work) */
+.pl-intro { max-width: 42rem; }
+.pipeline { margin: clamp(1.6rem, 4vw, 2.6rem) 0 0; }
+.pipeline .pl-svg { width: 100%; height: auto; display: block; }
+.pl-svg .pl-node { cursor: help; }
+.pl-svg .pl-node rect { transition: stroke-width .12s ease; }
+.pl-svg .pl-node:hover rect { stroke-width: 3.5; }
+.pl-svg .pl-gate { cursor: help; }
+.pl-legend {
+  margin: 1.1rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem 1.3rem;
+  font-family: var(--font-label); font-size: .78rem; letter-spacing: .03em; color: var(--ink-soft);
+}
+.pl-legend .k { display: inline-flex; align-items: center; gap: .45rem; }
+.pl-legend .sw { width: .85rem; height: .85rem; border-radius: 3px; border: 2px solid; flex: none; }
+.pl-legend .sw.ed { background: #2b6a5b; border-color: #2b6a5b; }
+.pl-legend .sw.pr { background: #3f5c7a; border-color: #3f5c7a; }
+.pl-legend .sw.la { background: #a24e3b; border-color: #a24e3b; }
+.pl-legend .sw.bk { background: #5e7a4f; border-color: #5e7a4f; }
+.pl-legend .sw.ga { background: #b4832f; border-color: #b4832f; border-radius: 50%; }
+.pl-legend .pl-hint { font-style: italic; opacity: .85; }
