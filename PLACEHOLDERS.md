@@ -32,4 +32,4 @@ Everything on the site that is stand-in and needs the publisher before v1 can be
 
 ## Decisions still open
 
-- **The trilogy**: PIPELINE names a trilogy among the flagship leads, but the three volumes are not yet identified in the corpus. Name them when known.
+- **The trilogy**: resolved 2026-07-21. The Waking trilogy — Beyond the Pale, Pauper's Weatherglass, The Persistence of Memory — masters submitted to the press repo (all three at INTAKE, flagship, rapid-release one-campaign three-drops). On the production line; NOT yet in the public catalogue (unpublished — enters books.json at production).
