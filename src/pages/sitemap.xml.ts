@@ -9,6 +9,8 @@ export const GET: APIRoute = ({ site }) => {
     '/',
     '/books/',
     '/about/',
+    '/how-we-work/',
+    '/the-waking/',
     ...books.map((b) => `/books/${b.slug}/`),
   ];
   const body =

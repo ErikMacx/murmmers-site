@@ -14,7 +14,86 @@
     "flagship": true,
     "themes": [],
     "featured": true,
-    "status": "unpublished"
+    "status": "unpublished",
+    "coming_soon": {
+      "eyebrow": "The press's launch title",
+      "note": "The Petrosphere's Odyssey is finished, and it will be the first book Murmmers Press releases to the world."
+    }
+  },
+  {
+    "slug": "beyond-the-pale",
+    "title": "Beyond the Pale",
+    "subtitle": "The Waking, book one",
+    "description": "Robyn is seventeen, furious, and four hundred miles from everything she knows. Her mother is a year dead, her father has moved them to a school at the edge of Scotland, and there is a locked hangar at the bottom of the garden. Beyond the pale there is a country where your life is worth exactly what you carry in glass, where the weather hunts, and where the one rule that matters is her father's: note the exact time you arrived. Robyn thinks the strangest thing about the Cage is that she can cross into it at all. She is wrong. The strangest thing is how well it knows her.",
+    "words": 103719,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": null,
+    "flagship": true,
+    "themes": [],
+    "featured": false,
+    "status": "unpublished",
+    "series": {
+      "name": "The Waking",
+      "url": "/the-waking/"
+    },
+    "coming_soon": {
+      "eyebrow": "The first book of The Waking",
+      "note": "The Waking is one story told as three books, and it releases as one campaign in three drops. This is where it begins."
+    }
+  },
+  {
+    "slug": "paupers-weatherglass",
+    "title": "Pauper's Weatherglass",
+    "subtitle": "The Waking, book two",
+    "description": "Robyn came home with a story she can never tell, and marbles she should not have. She has a degree now, a life, a best friend who asks no questions. It has almost been enough. Then, in the crowd at her graduation, she sees a man who cannot possibly be there. The Cage wants her back, and this time it will not take a schoolgirl. And under everything, faint as a fridge in another room, there is a sound she has learned not to hear. One note. Steady. Counting.",
+    "words": 103809,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": null,
+    "flagship": true,
+    "themes": [],
+    "featured": false,
+    "status": "unpublished",
+    "series": {
+      "name": "The Waking",
+      "url": "/the-waking/"
+    },
+    "coming_soon": {
+      "eyebrow": "The second book of The Waking",
+      "note": "The Waking is one story told as three books, and it releases as one campaign in three drops. Start with Beyond the Pale."
+    }
+  },
+  {
+    "slug": "the-persistence-of-memory",
+    "title": "The Persistence of Memory",
+    "subtitle": "The Waking, book three",
+    "description": "Five years have passed since the Cage let Robyn go, and life at the bottom of the garden is kind. Her son is growing. The house is warm. The light is always exactly where she needs it. That is the problem.",
+    "words": 62904,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": null,
+    "flagship": true,
+    "themes": [],
+    "featured": false,
+    "status": "unpublished",
+    "series": {
+      "name": "The Waking",
+      "url": "/the-waking/"
+    },
+    "coming_soon": {
+      "eyebrow": "The last book of The Waking",
+      "note": "The Waking is one story told as three books, and it releases as one campaign in three drops. Start with Beyond the Pale."
+    }
   },
   {
     "slug": "welcome-home-the-medicine-letters",

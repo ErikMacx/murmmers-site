@@ -60,6 +60,10 @@ const jsonLd = {
 
         <p class="formatnote">{formatNote(book)}</p>
 
+        {book.series && (
+          <p class="series-link"><a href={book.series.url}>More about {book.series.name}</a></p>
+        )}
+
         {published ? (
           <div class="buys">
             {hasAmazon
@@ -69,11 +73,11 @@ const jsonLd = {
           </div>
         ) : (
           <div class="coming-soon">
-            <span class="eyebrow">The press’s launch title</span>
-            <p>The Petrosphere’s Odyssey is finished, and it will be the first book Murmmers Press releases to the world.</p>
+            <span class="eyebrow">{book.coming_soon?.eyebrow ?? 'Coming soon'}</span>
+            {book.coming_soon && <p>{book.coming_soon.note}</p>}
             <p>Be the first to read it. Leave your email and we will write to you the day it opens.</p>
             <div style="margin-top:1rem">
-              <EmailSignup heading="Be first to read it" note="One letter, the day The Petrosphere’s Odyssey opens." />
+              <EmailSignup heading="Be first to read it" note={`One letter, the day ${book.title} opens.`} />
             </div>
           </div>
         )}

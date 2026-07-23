@@ -4,7 +4,7 @@ Everything on the site that is stand-in and needs the publisher before v1 can be
 
 ## Content the publisher must supply
 
-- **Book descriptions** (all 20): `src/data/books.json` carries a marked placeholder per book. Each needs a one-line description in press voice.
+- **Book descriptions** (19 of 23): `src/data/books.json` carries a marked placeholder per book. Each needs a one-line description in press voice. Written so far: The Petrosphere's Odyssey and the three Waking books.
 - **Amazon listing URLs** (19 published books): `amazon_url` is empty pending ASINs. Each book page's Amazon buy link is inert until these land. The Petrosphere's Odyssey is excluded (see below).
 - **Themes** (all 20): `themes` is an empty array per book, for the publisher to fill.
 
@@ -32,4 +32,9 @@ Everything on the site that is stand-in and needs the publisher before v1 can be
 
 ## Decisions still open
 
-- **The trilogy**: resolved 2026-07-21. The Waking trilogy — Beyond the Pale, Pauper's Weatherglass, The Persistence of Memory — masters submitted to the press repo (all three at INTAKE, flagship, rapid-release one-campaign three-drops). On the production line; NOT yet in the public catalogue (unpublished — enters books.json at production).
+- **The trilogy, Book 3 copy depth**: the site description for The Persistence of Memory deliberately stops at "That is the problem." The locked Gate 2 back cover goes further (the flashes, the room, the count) because it assumes a reader who has finished Book 2, and the catalogue cannot assume that: a stranger can open Book 3's page first. Revisit at Gate 7, when the sequence is real and there is a Book 3 buyer to serve. Full approved copy lives in the press repo at `books/_the-waking-trilogy/gate2-blurbs-two-audience.md`.
+- **The trilogy on the homepage**: not in the featured row. "Where to begin" carries five flagships with covers; three coverless cards would thin it. Open question whether the trilogy gets a band of its own on the homepage once covers exist.
+
+## Superseded rulings
+
+- **The trilogy enters books.json at production** (ruled 2026-07-21). SUPERSEDED 2026-07-23 by publisher instruction: the trilogy goes into the public catalogue now, as three coming-soon titles. Beyond the Pale, Pauper's Weatherglass and The Persistence of Memory are in books.json with `status: unpublished`, `cover: null` (covers still held per intent, so each shows the title fallback frame), copy cut down from the locked Gate 2 blurbs, and a series link to /the-waking. The original reasoning stands as the reason there is still no cover, no price and no buy path on those pages.

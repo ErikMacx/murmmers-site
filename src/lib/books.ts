@@ -16,6 +16,10 @@ export interface Book {
   featured: boolean;
   status: 'published' | 'unpublished' | string;
   themes: string[];
+  // Books that belong to a sequence point back at their series page.
+  series?: { name: string; url: string };
+  // Per-book copy for the unpublished state, so the template stays generic.
+  coming_soon?: { eyebrow: string; note: string };
 }
 
 export const books = data as Book[];
