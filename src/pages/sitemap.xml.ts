@@ -10,6 +10,7 @@ export const GET: APIRoute = ({ site }) => {
     '/books/',
     '/about/',
     '/how-we-work/',
+    '/for-authors/',
     '/the-waking/',
     ...books.map((b) => `/books/${b.slug}/`),
   ];
