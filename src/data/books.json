@@ -4,7 +4,7 @@
     "title": "The Petrosphere Odyssey",
     "subtitle": "An Ancient Pilgrimage",
     "description": "A young woman at the end of her rope comes into the keeping of a small dark stone. Guided by a grandmother's journal, she walks an old road through the north of Scotland, and nine recognitions slowly put her back together.",
-    "words": 58010,
+    "words": 58050,
     "formats": [
       "ebook",
       "paperback"
@@ -18,14 +18,20 @@
     "coming_soon": {
       "eyebrow": "The press's launch title",
       "note": "The Petrosphere Odyssey is finished, and it will be the first book Murmmers Press releases to the world."
-    }
+    },
+    "chapters": 33,
+    "pages": 227,
+    "isbn_ebook": "978-1-919126-00-5",
+    "isbn_paperback": "978-1-919126-01-2",
+    "isbn_hardcover": "978-1-919126-02-9",
+    "stage": "40-TYPESET"
   },
   {
     "slug": "beyond-the-pale",
     "title": "Beyond the Pale",
     "subtitle": "The Waking, book one",
     "description": "Robyn is seventeen, furious, and four hundred miles from everything she knows. Her mother is a year dead, her father has moved them to a school at the edge of Scotland, and there is a locked hangar at the bottom of the garden. Beyond the pale there is a country where your life is worth exactly what you carry in glass, where the weather hunts, and where the one rule that matters is her father's: note the exact time you arrived. Robyn thinks the strangest thing about the Cage is that she can cross into it at all. She is wrong. The strangest thing is how well it knows her.",
-    "words": 103719,
+    "words": 97274,
     "formats": [
       "ebook",
       "paperback"
@@ -43,14 +49,19 @@
     "coming_soon": {
       "eyebrow": "The first book of The Waking",
       "note": "The Waking is one story told as three books, and it releases as one campaign in three drops. This is where it begins."
-    }
+    },
+    "chapters": 56,
+    "isbn_ebook": "978-1-919126-06-7",
+    "isbn_paperback": "978-1-919126-07-4",
+    "isbn_hardcover": "978-1-919126-08-1",
+    "stage": "10-ANALYSIS"
   },
   {
     "slug": "paupers-weatherglass",
     "title": "Pauper's Weatherglass",
     "subtitle": "The Waking, book two",
     "description": "Robyn came home with a story she can never tell, and marbles she should not have. She has a degree now, a life, a best friend who asks no questions. It has almost been enough. Then, in the crowd at her graduation, she sees a man who cannot possibly be there. The Cage wants her back, and this time it will not take a schoolgirl. And under everything, faint as a fridge in another room, there is a sound she has learned not to hear. One note. Steady. Counting.",
-    "words": 103809,
+    "words": 100909,
     "formats": [
       "ebook",
       "paperback"
@@ -68,14 +79,19 @@
     "coming_soon": {
       "eyebrow": "The second book of The Waking",
       "note": "The Waking is one story told as three books, and it releases as one campaign in three drops. Start with Beyond the Pale."
-    }
+    },
+    "chapters": 46,
+    "isbn_ebook": "978-1-919126-09-8",
+    "isbn_paperback": "978-1-919126-10-4",
+    "isbn_hardcover": "978-1-919126-11-1",
+    "stage": "10-ANALYSIS"
   },
   {
     "slug": "the-persistence-of-memory",
     "title": "The Persistence of Memory",
     "subtitle": "The Waking, book three",
     "description": "Five years have passed since the Cage let Robyn go, and life at the bottom of the garden is kind. Her son is growing. The house is warm. The light is always exactly where she needs it. That is the problem.",
-    "words": 62904,
+    "words": 64056,
     "formats": [
       "ebook",
       "paperback"
@@ -93,14 +109,19 @@
     "coming_soon": {
       "eyebrow": "The last book of The Waking",
       "note": "The Waking is one story told as three books, and it releases as one campaign in three drops. Start with Beyond the Pale."
-    }
+    },
+    "chapters": 15,
+    "isbn_ebook": "978-1-919126-12-8",
+    "isbn_paperback": "978-1-919126-13-5",
+    "isbn_hardcover": "978-1-919126-14-2",
+    "stage": "10-ANALYSIS"
   },
   {
     "slug": "welcome-home-the-medicine-letters",
     "title": "Welcome Home",
     "subtitle": "The Medicine Letters",
     "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
-    "words": 38500,
+    "words": 38545,
     "formats": [
       "ebook",
       "paperback"
@@ -110,7 +131,13 @@
     "flagship": true,
     "themes": [],
     "featured": true,
-    "status": "published"
+    "status": "published",
+    "chapters": 71,
+    "pages": 374,
+    "isbn_ebook": "978-1-919126-18-0",
+    "isbn_paperback": "978-1-919126-19-7",
+    "isbn_hardcover": "978-1-919126-20-3",
+    "stage": "40-TYPESET"
   },
   {
     "slug": "spiral-masterworks-the-geometry-of-human-becoming",
@@ -127,7 +154,13 @@
     "flagship": true,
     "themes": [],
     "featured": true,
-    "status": "published"
+    "status": "published",
+    "chapters": 139,
+    "pages": 306,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "cathedral-church-not-made-with-hands",
@@ -144,14 +177,20 @@
     "flagship": true,
     "themes": [],
     "featured": true,
-    "status": "published"
+    "status": "published",
+    "chapters": 39,
+    "pages": 224,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "coherence-essence-and-form",
     "title": "Coherence",
     "subtitle": "Essence and Form",
     "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
-    "words": 18516,
+    "words": 21906,
     "formats": [
       "ebook",
       "paperback"
@@ -161,7 +200,13 @@
     "flagship": true,
     "themes": [],
     "featured": true,
-    "status": "published"
+    "status": "published",
+    "chapters": 67,
+    "pages": 210,
+    "isbn_ebook": "978-1-919126-15-9",
+    "isbn_paperback": "978-1-919126-16-6",
+    "isbn_hardcover": "978-1-919126-17-3",
+    "stage": "40-TYPESET"
   },
   {
     "slug": "a-cosmology-of-emergence-the-wild-edition",
@@ -170,14 +215,20 @@
     "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
     "words": 11935,
     "formats": [
-      "ebook"
+      "ebook",
+      "paperback"
     ],
     "amazon_url": "",
     "cover": "a-cosmology-of-emergence-the-wild-edition.jpg",
     "flagship": false,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 36,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "pebble-the-stone-that-didnt-speak-much",
@@ -194,7 +245,13 @@
     "flagship": false,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 38,
+    "pages": 72,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "20-FINGERPRINT"
   },
   {
     "slug": "presence-a-cosmology-beyond-mindfulness",
@@ -211,7 +268,13 @@
     "flagship": false,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 36,
+    "pages": 138,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "questions-letting-reality-find-you",
@@ -228,7 +291,13 @@
     "flagship": false,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 30,
+    "pages": 186,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "remember-the-ten-returns",
@@ -245,7 +314,13 @@
     "flagship": false,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 32,
+    "pages": 240,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "scripture-for-electric-monks-a-user-manual-for",
@@ -262,7 +337,13 @@
     "flagship": false,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 24,
+    "pages": 156,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "shell-the-seashell-who-didnt-hear-much",
@@ -279,14 +360,20 @@
     "flagship": false,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 33,
+    "pages": 80,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "the-grounding-chambers-of-ache-and-ancestry",
     "title": "The Grounding",
     "subtitle": "Chambers of Ache and Ancestry",
     "description": "PLACEHOLDER: publisher to write a one-line description for this book.",
-    "words": null,
+    "words": 19078,
     "formats": [
       "ebook",
       "paperback"
@@ -296,7 +383,13 @@
     "flagship": false,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 27,
+    "pages": 120,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "the-healing-the-way-of-the-soul",
@@ -313,7 +406,13 @@
     "flagship": true,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 42,
+    "pages": 94,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "the-looking-glass-the-art-of-mirror-meditation",
@@ -330,7 +429,13 @@
     "flagship": false,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 32,
+    "pages": 138,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "the-mirrorroot-canon-a-field-guide-to-symbolic",
@@ -347,7 +452,13 @@
     "flagship": false,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 29,
+    "pages": 104,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "the-soar-how-the-soul-flies",
@@ -364,7 +475,13 @@
     "flagship": false,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 41,
+    "pages": 94,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "the-threshold-grimoire-doors-without-handles-need",
@@ -381,7 +498,13 @@
     "flagship": false,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 80,
+    "pages": 174,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "the-twelve-gifts-a-christmas-journey",
@@ -398,7 +521,13 @@
     "flagship": false,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 32,
+    "pages": 66,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
   },
   {
     "slug": "what-the-field-always-meant-beyond-the-universal",
@@ -415,6 +544,104 @@
     "flagship": false,
     "themes": [],
     "featured": false,
-    "status": "published"
+    "status": "published",
+    "chapters": 23,
+    "pages": 84,
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE"
+  },
+  {
+    "slug": "death-not-what-you-think",
+    "title": "Death: Not What You Think",
+    "subtitle": "",
+    "words": 17750,
+    "chapters": 9,
+    "pages": null,
+    "status": "unpublished",
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE",
+    "description": "",
+    "cover": "",
+    "amazon_url": "",
+    "flagship": false,
+    "themes": [],
+    "featured": false
+  },
+  {
+    "slug": "deaths-apprentice",
+    "title": "Death's Apprentice",
+    "subtitle": "",
+    "words": 9768,
+    "chapters": 18,
+    "pages": null,
+    "status": "unpublished",
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE",
+    "description": "",
+    "cover": "",
+    "amazon_url": "",
+    "flagship": false,
+    "themes": [],
+    "featured": false
+  },
+  {
+    "slug": "the-glass-tower",
+    "title": "The Glass Tower",
+    "subtitle": "",
+    "words": 108476,
+    "chapters": 46,
+    "pages": null,
+    "status": "unpublished",
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "isbn_ebook": "",
+    "isbn_paperback": "",
+    "isbn_hardcover": "",
+    "stage": "00-INTAKE",
+    "description": "",
+    "cover": "",
+    "amazon_url": "",
+    "flagship": false,
+    "themes": [],
+    "featured": false
+  },
+  {
+    "slug": "the-honest-pilgrim",
+    "title": "The Honest Pilgrim",
+    "subtitle": "The journey of impossible answers",
+    "words": 19451,
+    "chapters": 18,
+    "pages": 88,
+    "status": "unpublished",
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "isbn_ebook": "978-1-919126-03-6",
+    "isbn_paperback": "978-1-919126-04-3",
+    "isbn_hardcover": "978-1-919126-05-0",
+    "stage": "00-INTAKE",
+    "description": "",
+    "cover": "",
+    "amazon_url": "",
+    "flagship": false,
+    "themes": [],
+    "featured": false
   }
 ]

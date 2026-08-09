@@ -1,7 +1,7 @@
 // Public sitemap. Lists the storefront routes only; the private /studio route
 // and the 404 are deliberately excluded.
 import type { APIRoute } from 'astro';
-import { books } from '../lib/books';
+import { listed } from '../lib/books';
 
 export const GET: APIRoute = ({ site }) => {
   const base = (site?.toString() ?? 'https://murmmers.com/').replace(/\/$/, '');
@@ -12,7 +12,7 @@ export const GET: APIRoute = ({ site }) => {
     '/how-we-work/',
     '/for-authors/',
     '/the-waking/',
-    ...books.map((b) => `/books/${b.slug}/`),
+    ...listed.map((b) => `/books/${b.slug}/`),
   ];
   const body =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +

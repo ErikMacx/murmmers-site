@@ -27,6 +27,12 @@ export const books = data as Book[];
 // Homepage-featured order is the order they appear in books.json.
 export const featured = books.filter((b) => b.featured);
 
+// A book is only PUBLIC once it has copy written for it. The catalogue is synced
+// from the press repo and grows whenever a title is registered, long before
+// anyone has written its description or made its cover. Without this guard a
+// registered manuscript would get a live page the moment it entered the repo.
+export const listed = books.filter((b) => b.description?.trim() && b.cover);
+
 export const bySlug = (slug: string): Book | undefined =>
   books.find((b) => b.slug === slug);
 

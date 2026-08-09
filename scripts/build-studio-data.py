@@ -12,7 +12,11 @@ read-only press repo.
 import json, os, re
 
 SITE = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-PRESS = os.path.expanduser("~/murmmers/murmmers-press")
+# The live press repo. Was ~/murmmers/murmmers-press, a second clone that had
+# drifted a day behind and was missing three registered books, which is why the
+# Studio production line did not reflect true pipeline status. Corrected
+# 2026-08-09 to the working repo that auto-pushes to GitHub.
+PRESS = os.path.expanduser("~/Documents/GitHub/murmmers")
 HTML = os.path.join(SITE, "public", "studio", "production-line.html")
 
 books = json.load(open(os.path.join(SITE, "src", "data", "books.json"), encoding="utf-8"))

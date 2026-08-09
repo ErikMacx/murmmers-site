@@ -3,11 +3,11 @@ import { getImage } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import Cover from '../../components/Cover.astro';
 import EmailSignup from '../../components/EmailSignup.astro';
-import { books, formatNote, type Book } from '../../lib/books';
+import { listed, formatNote, type Book } from '../../lib/books';
 import { coverFor } from '../../lib/covers';
 
 export function getStaticPaths() {
-  return books.map((book) => ({ params: { slug: book.slug }, props: { book } }));
+  return listed.map((book) => ({ params: { slug: book.slug }, props: { book } }));
 }
 
 interface Props { book: Book; }
