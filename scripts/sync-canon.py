@@ -26,8 +26,21 @@ import re
 import sys
 
 SITE = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-PRESS = os.path.expanduser("~/Documents/GitHub/murmmers")
 DATA = os.path.join(SITE, "src", "data", "books.json")
+
+# The press repo has two working clones, and they have diverged:
+#   ~/murmmers/murmmers-press      branch main, pushes to coherence-main.
+#                                  Carries the production work: covers, wraps,
+#                                  the ISBN register, the four live books.
+#   ~/Documents/GitHub/murmmers    branch uplift-cowork-pilot. Carries the
+#                                  Waking editorial line, and is the ONLY clone
+#                                  holding the book.json canon files this
+#                                  script reads.
+# So the canon path below is the second one by necessity, not by choice, and it
+# cannot see any production state recorded in the first. Until the clones are
+# reconciled, treat a sync as partial and check state/PIPELINE-STATE.md in the
+# production clone before trusting a status field.
+PRESS = os.path.expanduser(os.environ.get("MURMMERS_PRESS", "~/Documents/GitHub/murmmers"))
 
 CANON_FIELDS = ("title", "subtitle", "words", "chapters", "pages", "status",
                 "formats", "isbn_ebook", "isbn_paperback", "isbn_hardcover",
@@ -86,9 +99,11 @@ def main():
 
     for slug, c in canon.items():
         if slug not in by_slug:
+            # New titles arrive switched OFF. A book joins the public site only
+            # when the publisher says so and it has a real cover and copy.
             entry = {"slug": slug, **c, "description": "", "cover": "",
-                     "amazon_url": "", "flagship": False, "themes": [],
-                     "featured": False}
+                     "amazon_url": "", "payhip_url": "", "flagship": False,
+                     "themes": [], "featured": False, "on_site": False}
             site.append(entry)
             by_slug[slug] = entry
             added.append(slug)
@@ -122,6 +137,16 @@ def main():
             if k == "title" and b.get("subtitle") and new.startswith(old):
                 conflicts.append(f"{slug}.title: canon {new!r} folds in the "
                                  f"subtitle — site kept")
+                continue
+
+            # 4. A book that is ON SALE is described by its listing, not by a
+            #    canon clone that has not caught up. Found by a dry run that
+            #    would have dropped hardcover from all four live books and put
+            #    Welcome Home back to its first-edition page count.
+            if b.get("status") == "published" and k in ("formats", "pages",
+                                                        "words", "chapters"):
+                conflicts.append(f"{slug}.{k}: {slug} is on sale; canon says "
+                                 f"{new!r}, site says {old!r} — site kept")
                 continue
 
             changed.append(f"{slug}.{k}: {old!r} -> {new!r}")

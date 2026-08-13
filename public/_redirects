@@ -1,1 +1,25 @@
 /books/the-petrospheres-odyssey/  /books/the-petrosphere-odyssey/  301
+
+# Back-catalogue pages held until each book has a real cover and description.
+# 302, not 301: these come back at the same URLs, so nothing should cache
+# the redirect as permanent.
+/books/a-cosmology-of-emergence-the-wild-edition/  /books/  302
+/books/cathedral-church-not-made-with-hands/  /books/  302
+/books/death-not-what-you-think/  /books/  302
+/books/deaths-apprentice/  /books/  302
+/books/pebble-the-stone-that-didnt-speak-much/  /books/  302
+/books/presence-a-cosmology-beyond-mindfulness/  /books/  302
+/books/questions-letting-reality-find-you/  /books/  302
+/books/remember-the-ten-returns/  /books/  302
+/books/scripture-for-electric-monks-a-user-manual-for/  /books/  302
+/books/shell-the-seashell-who-didnt-hear-much/  /books/  302
+/books/spiral-masterworks-the-geometry-of-human-becoming/  /books/  302
+/books/the-glass-tower/  /books/  302
+/books/the-grounding-chambers-of-ache-and-ancestry/  /books/  302
+/books/the-healing-the-way-of-the-soul/  /books/  302
+/books/the-looking-glass-the-art-of-mirror-meditation/  /books/  302
+/books/the-mirrorroot-canon-a-field-guide-to-symbolic/  /books/  302
+/books/the-soar-how-the-soul-flies/  /books/  302
+/books/the-threshold-grimoire-doors-without-handles-need/  /books/  302
+/books/the-twelve-gifts-a-christmas-journey/  /books/  302
+/books/what-the-field-always-meant-beyond-the-universal/  /books/  302
