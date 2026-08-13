@@ -23,7 +23,7 @@
     "isbn_hardcover": "978-1-919126-02-9",
     "stage": "40-TYPESET",
     "on_site": true,
-    "payhip_url": "https://payhip.com/b/N0SmJ",
+    "payhip_url": "",
     "published_on": "2026-07-25",
     "prices": {
       "ebook": {
@@ -41,7 +41,8 @@
     },
     "asin_ebook": "B0HBWV4CKP",
     "asin_paperback": "1919126015",
-    "asin_hardcover": "1919126023"
+    "asin_hardcover": "1919126023",
+    "payhip_url_pending": "https://payhip.com/b/N0SmJ"
   },
   {
     "slug": "the-honest-pilgrim",
