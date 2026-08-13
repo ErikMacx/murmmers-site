@@ -1,20 +1,74 @@
 ---
-// Newsletter capture. No provider is configured yet: the form posts to a
-// placeholder action, clearly marked as a TODO. See PLACEHOLDERS.md.
-interface Props { heading?: string; note?: string; }
+// Newsletter capture. Posts to /api/subscribe, which emails each signup to the
+// press today and forwards to the provider once MAILERLITE_KEY is set. To send
+// readers straight to the provider's own hosted form instead, set
+// NEWSLETTER_ACTION in src/lib/newsletter.ts.
+import { NEWSLETTER_ACTION } from '../lib/newsletter';
+
+interface Props { heading?: string; note?: string; source?: string; }
 const {
   heading = 'Stay close to the press',
   note = 'A quiet letter when a new book arrives. No noise.',
+  source = Astro.url.pathname,
 } = Astro.props;
+
+const action = NEWSLETTER_ACTION || '/api/subscribe';
+const external = action.startsWith('http');
 ---
 
 <div class="signup">
   <h3>{heading}</h3>
   <p class="muted">{note}</p>
-  <form action="/newsletter-todo" method="post">
-    <label class="skip" for="email">Email address</label>
-    <input id="email" type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+  <form action={action} method="post" data-signup={external ? undefined : ''}>
+    {!external && <input type="hidden" name="source" value={source} />}
+    <label class="skip" for={`email-${source}`}>Email address</label>
+    <input id={`email-${source}`} type="email" name="email" required placeholder="you@example.com" autocomplete="email" />
     <button class="btn" type="submit">Sign up</button>
+    {!external && (
+      <div class="hp" aria-hidden="true">
+        <label for={`website-${source}`}>Leave this empty</label>
+        <input id={`website-${source}`} type="text" name="website" tabindex="-1" autocomplete="off" />
+      </div>
+    )}
+    <p class="fb-status" role="status" aria-live="polite"></p>
   </form>
-  <p class="todo">Placeholder form. The email provider is not wired yet.</p>
 </div>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('form[data-signup]').forEach((form) => {
+    const status = form.querySelector<HTMLParagraphElement>('.fb-status');
+    const button = form.querySelector<HTMLButtonElement>('button[type=submit]');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!status || !button) return;
+
+      button.disabled = true;
+      status.textContent = 'Signing you up.';
+      status.classList.remove('bad');
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { accept: 'application/json' },
+        });
+        const result = await response.json() as { ok: boolean; message: string };
+
+        if (result.ok) {
+          const thanks = document.createElement('p');
+          thanks.className = 'fb-thanks';
+          thanks.textContent = result.message;
+          form.replaceWith(thanks);
+          return;
+        }
+        status.textContent = result.message;
+        status.classList.add('bad');
+      } catch {
+        status.textContent = 'That did not send. Please try again in a moment.';
+        status.classList.add('bad');
+      }
+      button.disabled = false;
+    });
+  });
+</script>

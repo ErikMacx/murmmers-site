@@ -1,0 +1,80 @@
+---
+// A quiet channel back from the reader. Posts to /api/feedback, a Pages
+// Function that emails the note to the press. Works without JavaScript: the
+// form posts normally and the function returns a page.
+interface Props { book: string; }
+const { book } = Astro.props;
+---
+
+<div class="feedback">
+  <h3>How did this book land?</h3>
+  <p class="muted">If it met you somewhere, or missed you, we would like to know. This goes to the press, and nowhere else.</p>
+
+  <form method="post" action="/api/feedback" data-feedback>
+    <input type="hidden" name="book" value={book} />
+
+    <label class="skip" for="fb-message">Your note</label>
+    <textarea id="fb-message" name="message" rows="4" required placeholder="Anything at all."></textarea>
+
+    <div class="row">
+      <div>
+        <label class="skip" for="fb-name">Your name, if you like</label>
+        <input id="fb-name" type="text" name="name" placeholder="Your name, if you like" autocomplete="name" />
+      </div>
+      <div>
+        <label class="skip" for="fb-email">Email, only if you want a reply</label>
+        <input id="fb-email" type="email" name="email" placeholder="Email, only if you want a reply" autocomplete="email" />
+      </div>
+    </div>
+
+    <!-- Bots fill this in. People never see it. -->
+    <div class="hp" aria-hidden="true">
+      <label for="fb-website">Leave this empty</label>
+      <input id="fb-website" type="text" name="website" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <button class="btn" type="submit">Send it</button>
+    <p class="fb-status" role="status" aria-live="polite"></p>
+  </form>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('form[data-feedback]').forEach((form) => {
+    const status = form.querySelector<HTMLParagraphElement>('.fb-status');
+    const button = form.querySelector<HTMLButtonElement>('button[type=submit]');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!status || !button) return;
+
+      button.disabled = true;
+      status.textContent = 'Sending.';
+      status.classList.remove('bad');
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { accept: 'application/json' },
+        });
+        const result = await response.json() as { ok: boolean; message: string };
+
+        if (result.ok) {
+          // Replace the form with the thanks, so there is nothing left to
+          // press twice and no doubt about whether it went.
+          const thanks = document.createElement('p');
+          thanks.className = 'fb-thanks';
+          thanks.textContent = result.message;
+          form.replaceWith(thanks);
+          return;
+        }
+        status.textContent = result.message;
+        status.classList.add('bad');
+      } catch {
+        status.textContent = 'That did not send. Please try again in a moment.';
+        status.classList.add('bad');
+      }
+      button.disabled = false;
+    });
+  });
+</script>

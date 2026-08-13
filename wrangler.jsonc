@@ -1,0 +1,26 @@
+{
+  // Cloudflare Pages config for murmmers.com.
+  //
+  // The site itself is static Astro; this file exists so the two Pages
+  // Functions in functions/api/ can send email through Cloudflare's own Email
+  // Sending service rather than a third-party form service.
+  //
+  // Before the first send, once:
+  //   npx wrangler email sending enable murmmers.com
+  // then in the Pages project settings add the variable FEEDBACK_TO (the
+  // address that should receive reader notes and signups), and optionally
+  // MAILERLITE_KEY as a secret once the MailerLite account exists.
+  //
+  // Note: onboarding adds DKIM records and asks for an SPF include. The zone
+  // already has NameCheap's forwarding SPF, so the include must be ADDED to
+  // the existing record, never replace it, or inbound forwarding breaks.
+  "name": "murmmers-site",
+  "compatibility_date": "2026-08-13",
+  "pages_build_output_dir": "dist",
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "allowed_sender_addresses": ["feedback@murmmers.com"]
+    }
+  ]
+}
