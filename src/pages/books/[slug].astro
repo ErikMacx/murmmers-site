@@ -3,7 +3,8 @@ import { getImage } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import Cover from '../../components/Cover.astro';
 import EmailSignup from '../../components/EmailSignup.astro';
-import { listed, formatNote, type Book } from '../../lib/books';
+import Feedback from '../../components/Feedback.astro';
+import { listed, formatNote, amazonUrl, type Book } from '../../lib/books';
 import { coverFor } from '../../lib/covers';
 
 export function getStaticPaths() {
@@ -21,7 +22,10 @@ const ogAbsolute = ogPath ? new URL(ogPath, Astro.site).toString() : undefined;
 
 const isPlaceholderDesc = book.description.startsWith('PLACEHOLDER');
 const published = book.status !== 'unpublished';
-const hasAmazon = published && book.amazon_url.length > 0;
+const amazon = amazonUrl(book);
+const hasAmazon = published && amazon.length > 0;
+const hasDirect = published && book.payhip_url.length > 0;
+const fullTitle = book.subtitle ? `${book.title}: ${book.subtitle}` : book.title;
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -34,6 +38,7 @@ const jsonLd = {
   url: new URL(`/books/${book.slug}/`, Astro.site).toString(),
   ...(ogAbsolute ? { image: ogAbsolute } : {}),
   ...(!isPlaceholderDesc ? { description: book.description } : {}),
+  ...(book.isbn_ebook ? { isbn: book.isbn_ebook } : {}),
 };
 ---
 
@@ -67,9 +72,14 @@ const jsonLd = {
         {published ? (
           <div class="buys">
             {hasAmazon
-              ? <a class="btn" href={book.amazon_url}>Buy on Amazon</a>
+              ? <a class="btn" href={amazon}>Buy on Amazon</a>
               : <span class="btn disabled" aria-disabled="true">Amazon listing coming soon</span>}
-            <span class="btn disabled" aria-disabled="true">Buy direct from Murmmers, soon</span>
+
+            {hasDirect
+              ? <a class="btn ghost" href={book.payhip_url}>Buy the ebook direct from Murmmers</a>
+              : <span class="btn disabled" aria-disabled="true">Ebook direct from Murmmers, soon</span>}
+
+            <p class="buys-note muted">Buying the ebook direct sends more of the price to the press, and the file is yours to keep: no account, no app, no expiry. Print editions are through Amazon.</p>
           </div>
         ) : (
           <div class="coming-soon">
@@ -77,11 +87,26 @@ const jsonLd = {
             {book.coming_soon && <p>{book.coming_soon.note}</p>}
             <p>Be the first to read it. Leave your email and we will write to you the day it opens.</p>
             <div style="margin-top:1rem">
-              <EmailSignup heading="Be first to read it" note={`One letter, the day ${book.title} opens.`} />
+              <EmailSignup
+                heading="Be first to read it"
+                note={`One letter, the day ${book.title} opens.`}
+                source={book.slug}
+              />
             </div>
           </div>
         )}
       </div>
     </article>
+
+    {published && (
+      <div class="book-after">
+        <Feedback book={fullTitle} />
+        <EmailSignup
+          heading="Stay close"
+          note="A letter when a new book arrives. Nothing else, ever."
+          source={book.slug}
+        />
+      </div>
+    )}
   </section>
 </Base>

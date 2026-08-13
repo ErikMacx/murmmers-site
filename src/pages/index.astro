@@ -54,8 +54,9 @@ import { featured } from '../lib/books';
     <div class="wrap">
       <h2>Where to begin</h2>
       <div class="book-grid featured">
-        {featured.map((book, i) => <BookCard book={book} loading={i < 5 ? 'eager' : 'lazy'} />)}
+        {featured.map((book, i) => <BookCard book={book} loading={i < 4 ? 'eager' : 'lazy'} />)}
       </div>
+      <p class="after-books"><a href="/books/">All books, and what is coming</a></p>
     </div>
   </section>
 

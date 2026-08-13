@@ -1,18 +1,39 @@
 ---
 import Base from '../../layouts/Base.astro';
 import BookCard from '../../components/BookCard.astro';
-import { books } from '../../lib/books';
+import EmailSignup from '../../components/EmailSignup.astro';
+import { published, forthcoming } from '../../lib/books';
 ---
 
-<Base title="Books" description="The full Murmmers Press catalogue: fiction with soul.">
+<Base title="Books" description="The Murmmers Press catalogue: fiction with soul, published and forthcoming.">
   <section class="section">
     <div class="wrap">
       <p class="eyebrow">The catalogue</p>
       <h1>Books</h1>
-      <p class="prose muted">{books.length} titles. Many are novella length: single-sitting reads, made to be finished in one quiet evening.</p>
-      <div class="book-grid" style="margin-top:2rem">
-        {books.map((book, i) => <BookCard book={book} loading={i < 8 ? 'eager' : 'lazy'} />)}
+      <p class="prose muted">Four books out in the world, and a trilogy on its way. Several are novella length: single-sitting reads, made to be finished in one quiet evening.</p>
+
+      <h2 class="band-head">Out now</h2>
+      <div class="book-grid">
+        {published.map((book, i) => <BookCard book={book} loading={i < 4 ? 'eager' : 'lazy'} />)}
       </div>
+
+      {forthcoming.length > 0 && (
+        <>
+          <h2 class="band-head">Coming soon</h2>
+          <p class="prose muted band-note">The Waking is one story told as three books, and it releases as one campaign in three drops. <a href="/the-waking/">More about the trilogy</a>.</p>
+          <div class="book-grid">
+            {forthcoming.map((book) => <BookCard book={book} loading="lazy" />)}
+          </div>
+        </>
+      )}
+
+      <p class="prose muted more-coming">More of the back catalogue joins these pages as each book comes through the press.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <EmailSignup heading="Know when the next one lands" note="A letter when a new book arrives. Nothing else, ever." />
     </div>
   </section>
 </Base>

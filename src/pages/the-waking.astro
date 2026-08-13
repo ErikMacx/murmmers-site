@@ -1,5 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
+import BookCard from '../components/BookCard.astro';
+import { forthcoming } from '../lib/books';
+
+// The three books in reading order, as they sit in books.json.
+const trilogy = forthcoming.filter((b) => b.series?.url === '/the-waking/');
 ---
 
 <Base title="The Waking — coming soon" description="One story, told as three books. The Waking, a trilogy from Murmmers Press. Coming soon.">
@@ -22,6 +27,11 @@ import Base from '../layouts/Base.astro';
   <section class="how-section">
     <div class="wrap">
       <h2>Three books, one passage</h2>
+      {trilogy.length > 0 && (
+        <div class="series-books">
+          {trilogy.map((book) => <BookCard book={book} loading="eager" />)}
+        </div>
+      )}
       <div class="roles">
         <div class="role">
           <h3><a href="/books/beyond-the-pale/">I. Beyond the Pale</a></h3>
