@@ -11,7 +11,7 @@ export const GET: APIRoute = ({ site }) => {
     '/about/',
     '/how-we-work/',
     '/for-authors/',
-    '/the-waking/',
+    '/where-giants-sleep/',
     ...listed.map((b) => `/books/${b.slug}/`),
   ];
   const body =
