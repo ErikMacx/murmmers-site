@@ -59,9 +59,13 @@ const jsonLd = {
         <h1>{book.title}</h1>
         {book.subtitle && <p class="subtitle">{book.subtitle}</p>}
 
+        {book.tagline && <p class="tagline">{book.tagline}</p>}
+
         {isPlaceholderDesc
           ? <p class="muted"><em>{book.description}</em></p>
-          : <p class="prose">{book.description}</p>}
+          : book.blurb
+            ? book.blurb.map((para: string) => <p class="prose">{para}</p>)
+            : <p class="prose">{book.description}</p>}
 
         <p class="formatnote">{formatNote(book)}</p>
 

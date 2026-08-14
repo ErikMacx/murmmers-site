@@ -8,6 +8,11 @@ export interface Book {
   title: string;
   subtitle: string;
   description: string;
+  // A jacket line, and the back-cover copy as its own paragraphs. The book
+  // page prefers `blurb` when it is present; `description` stays a single
+  // clean paragraph for the meta tag and the cards.
+  tagline?: string;
+  blurb?: string[];
   words: number | null;
   formats: string[];
   // A full Amazon URL, used only when a book needs a link the ASIN cannot
