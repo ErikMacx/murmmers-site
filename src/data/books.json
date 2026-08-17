@@ -177,6 +177,44 @@
     "asin_hardcover": "1919126201"
   },
   {
+    "slug": "its-only-a-walk",
+    "title": "It's Only a Walk",
+    "subtitle": "Nine things Cyprus never wrote down",
+    "description": "A dead woman's house. A hand-drawn map. Nine points, none of them labelled. And on the back, in black biro, four words: Walk it or don't. Andreas Loizou has ten days set aside to sell an aunt's house on Cyprus. He stays nine months, because the map in her kitchen drawer is real, and its nine points lead him across a divided island to the nine things it has never written down. Not mysticism: nine usable insights about attention, worry, and the worlds we build without noticing.",
+    "tagline": "Walk it or don't.",
+    "blurb": [
+      "There are nine things that can be understood on this island and nowhere else, and they have never been written down.",
+      "Andreas Loizou comes to Cyprus to sell a house he never lived in, left by an aunt he barely knew. In her kitchen drawer he finds a map of the island, traced by hand in biro, with nine unmarked points and four words on the back: Walk it or don't.",
+      "Guided by a retired schoolteacher who refuses to explain anything, he walks it, October to the summer solstice: a street with a border across it, a sealed city, a church full of eyes, a mountain that listens to the whole sea and can do nothing. At every point, something the island learned the hard way, over eight hundred years, about how people hold together when nothing else does.",
+      "And every month, on a headland that moves, there is a party. The sun touches the sea. It takes four minutes. Nobody owns it, nobody can sell it, and it asks you to believe nothing at all.",
+      "The walk has no finish line. It has a chair."
+    ],
+    "words": 61566,
+    "formats": [
+      "ebook",
+      "paperback",
+      "hardcover"
+    ],
+    "amazon_url": "",
+    "cover": "its-only-a-walk.jpg",
+    "flagship": true,
+    "themes": [],
+    "featured": true,
+    "status": "published",
+    "chapters": 10,
+    "pages": 226,
+    "isbn_ebook": "978-1-919126-21-0",
+    "isbn_paperback": "978-1-919126-22-7",
+    "isbn_hardcover": "978-1-919126-23-4",
+    "stage": "40-TYPESET",
+    "on_site": true,
+    "payhip_url": "",
+    "published_on": "2026-08-17",
+    "asin_ebook": "",
+    "asin_paperback": "1919126228",
+    "asin_hardcover": "1919126236"
+  },
+  {
     "slug": "beyond-the-pale",
     "title": "Beyond the Pale",
     "subtitle": "Where Giants Sleep, book one",
