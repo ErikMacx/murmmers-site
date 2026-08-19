@@ -3,7 +3,6 @@ import { getImage } from 'astro:assets';
 import Base from '../../layouts/Base.astro';
 import Cover from '../../components/Cover.astro';
 import EmailSignup from '../../components/EmailSignup.astro';
-import Feedback from '../../components/Feedback.astro';
 import Reviews from '../../components/Reviews.astro';
 import { listed, formatNote, amazonUrl, type Book } from '../../lib/books';
 import { coverFor } from '../../lib/covers';
@@ -106,8 +105,6 @@ const jsonLd = {
     {published && (
       <div class="book-after">
         <Reviews book={book.slug} title={book.title} />
-
-        <Feedback book={fullTitle} />
         <EmailSignup
           heading="Stay close"
           note="A letter when a new book arrives. Nothing else, ever."
