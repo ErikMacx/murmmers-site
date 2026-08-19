@@ -25,32 +25,45 @@ const { book, title } = Astro.props;
     <form method="post" action="/api/review" data-review>
       <input type="hidden" name="book" value={book} />
 
-      <fieldset class="rv-rating">
+      <fieldset class="rv-rate">
         <legend>Your rating</legend>
-        {[5, 4, 3, 2, 1].map((n) => (
-          <label>
-            <input type="radio" name="stars" value={n} required />
-            <span>{'★'.repeat(n)}<span class="skip"> {n} out of 5</span></span>
-          </label>
-        ))}
+        {/* Reverse order, so CSS can light the chosen star and every one
+            before it with a sibling selector and no JavaScript. */}
+        <div class="rv-stars-in">
+          {[5, 4, 3, 2, 1].map((n) => (
+            <>
+              <input id={`rv-s${n}-${book}`} type="radio" name="stars" value={n} required />
+              <label for={`rv-s${n}-${book}`} title={`${n} out of 5`}>
+                <span aria-hidden="true">★</span>
+                <span class="skip">{n} star{n === 1 ? '' : 's'}</span>
+              </label>
+            </>
+          ))}
+        </div>
       </fieldset>
 
-      <label class="skip" for={`rv-name-${book}`}>The name to publish it under</label>
-      <input id={`rv-name-${book}`} type="text" name="name" required
-             placeholder="The name to publish it under" autocomplete="name" />
+      <div class="rv-field">
+        <label for={`rv-name-${book}`}>Your name</label>
+        <input id={`rv-name-${book}`} type="text" name="name" required
+               autocomplete="name" placeholder="However you would like it to appear" />
+      </div>
 
-      <label class="skip" for={`rv-comment-${book}`}>Your review of {title}</label>
-      <textarea id={`rv-comment-${book}`} name="comment" rows="5" required
-                placeholder="What did it do to you?"></textarea>
+      <div class="rv-field">
+        <label for={`rv-comment-${book}`}>Your review</label>
+        <textarea id={`rv-comment-${book}`} name="comment" rows="8" required
+                  placeholder={`What did ${title} do to you?`}></textarea>
+      </div>
 
-      <!-- Bots fill this in. People never see it. -->
+      {/* Bots fill this in. People never see it. */}
       <div class="hp" aria-hidden="true">
         <label for={`rv-website-${book}`}>Leave this empty</label>
         <input id={`rv-website-${book}`} type="text" name="website" tabindex="-1" autocomplete="off" />
       </div>
 
-      <p class="muted small">Reviews are read before they appear, so yours will not show straight away.</p>
-      <button class="btn" type="submit">Send the review</button>
+      <div class="rv-actions">
+        <button class="btn" type="submit">Send the review</button>
+        <p class="muted small">Reviews are read before they appear, so yours will not show straight away.</p>
+      </div>
       <p class="rv-status" role="status" aria-live="polite"></p>
     </form>
   </details>

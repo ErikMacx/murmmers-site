@@ -335,21 +335,44 @@ p { margin: 0 0 1rem; }
    the public voice first, the private channel under it. */
 .reviews { border: 1px solid var(--line); border-radius: 10px; padding: clamp(1.2rem, 4vw, 1.8rem); background: var(--card); margin-bottom: 1.4rem; }
 .reviews h3 { margin-bottom: .3em; }
+
+/* the published reviews */
 .rv-summary { display: flex; align-items: baseline; gap: .6rem; margin: .2rem 0 1rem; }
-.rv-stars { color: #b8860b; letter-spacing: .08em; font-size: 1.15rem; }
+.rv-stars { color: #c8901a; letter-spacing: .08em; font-size: 1.15rem; }
 .rv-average { color: var(--ink-soft); font-size: .92rem; }
 .rv-list { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; gap: 1.1rem; }
 .rv-list li { border-top: 1px solid var(--line); padding-top: .9rem; }
 .rv-list li:first-child { border-top: 0; padding-top: 0; }
-.rv-head { margin: 0 0 .3rem; font-weight: 600; color: var(--ink); }
-.rv-head::first-letter { color: inherit; }
+.rv-head { margin: 0 0 .3rem; font-weight: 600; }
 .rv-body { margin: 0; white-space: pre-wrap; }
 .rv-empty { margin: .2rem 0 1rem; }
-.rv-write summary { cursor: pointer; color: var(--accent, #244f45); }
-.rv-write form { margin-top: 1rem; }
-.rv-rating { border: 0; padding: 0; margin: 0 0 .8rem; display: flex; flex-wrap: wrap; gap: .4rem 1rem; }
-.rv-rating legend { padding: 0; margin-bottom: .35rem; font-size: .92rem; color: var(--ink-soft); }
-.rv-rating label { display: inline-flex; align-items: center; gap: .35rem; cursor: pointer; }
-.rv-rating span { color: #b8860b; letter-spacing: .06em; }
-.rv-status { margin-top: .6rem; font-size: .92rem; color: var(--ink-soft); }
+
+/* the form */
+.rv-write summary { cursor: pointer; color: var(--accent, #244f45); font-weight: 600; }
+.rv-write summary:hover { text-decoration: underline; }
+.rv-write form { margin-top: 1.2rem; display: grid; gap: 1.15rem; }
+
+.rv-rate { border: 0; padding: 0; margin: 0; }
+.rv-rate legend { padding: 0; margin-bottom: .35rem; font-weight: 600; font-size: .95rem; }
+/* One row of five stars. Reversed in the DOM so `~` can reach the stars
+   before the checked one; row-reverse puts them back in reading order. */
+.rv-stars-in { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: .1rem; }
+.rv-stars-in input { position: absolute; opacity: 0; width: 0; height: 0; }
+.rv-stars-in label { font-size: 2rem; line-height: 1; color: var(--line); cursor: pointer; padding: 0 .05em; transition: color .12s ease, transform .12s ease; }
+.rv-stars-in label:hover { transform: scale(1.12); }
+.rv-stars-in input:checked ~ label,
+.rv-stars-in label:hover,
+.rv-stars-in label:hover ~ label { color: #c8901a; }
+.rv-stars-in input:focus-visible + label { outline: 2px solid var(--accent, #244f45); outline-offset: 3px; border-radius: 3px; }
+
+.rv-field { display: grid; gap: .35rem; }
+.rv-field label { font-weight: 600; font-size: .95rem; }
+.rv-field input,
+.rv-field textarea { width: 100%; box-sizing: border-box; font: inherit; padding: .7rem .8rem; border: 1px solid var(--line); border-radius: 7px; background: var(--paper); color: var(--ink); }
+.rv-field textarea { resize: vertical; min-height: 9rem; line-height: 1.5; }
+.rv-field input:focus, .rv-field textarea:focus { outline: 2px solid var(--accent, #244f45); outline-offset: 1px; border-color: transparent; }
+
+.rv-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.1rem; }
+.rv-actions .muted { margin: 0; flex: 1 1 14rem; }
+.rv-status { margin: 0; font-size: .92rem; color: var(--ink-soft); }
 .small { font-size: .88rem; }
