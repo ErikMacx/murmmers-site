@@ -1,0 +1,118 @@
+---
+// Reader reviews for one book: the approved ones, and a form to add another.
+//
+// Reviews are fetched in the browser rather than baked at build, so an
+// approval appears without a redeploy. Nothing shows until the publisher has
+// approved it; the endpoint only ever returns approved rows.
+interface Props { book: string; title: string; }
+const { book, title } = Astro.props;
+---
+
+<section class="reviews" data-reviews={book}>
+  <h3>Reader reviews</h3>
+
+  <div class="rv-summary" hidden>
+    <span class="rv-stars" aria-hidden="true"></span>
+    <span class="rv-average"></span>
+  </div>
+
+  <ol class="rv-list"></ol>
+  <p class="rv-empty muted">No reviews yet. If you have read it, yours would be the first.</p>
+
+  <details class="rv-write">
+    <summary>Write a review</summary>
+
+    <form method="post" action="/api/review" data-review>
+      <input type="hidden" name="book" value={book} />
+
+      <fieldset class="rv-rating">
+        <legend>Your rating</legend>
+        {[5, 4, 3, 2, 1].map((n) => (
+          <label>
+            <input type="radio" name="stars" value={n} required />
+            <span>{'★'.repeat(n)}<span class="skip"> {n} out of 5</span></span>
+          </label>
+        ))}
+      </fieldset>
+
+      <label class="skip" for={`rv-name-${book}`}>The name to publish it under</label>
+      <input id={`rv-name-${book}`} type="text" name="name" required
+             placeholder="The name to publish it under" autocomplete="name" />
+
+      <label class="skip" for={`rv-comment-${book}`}>Your review of {title}</label>
+      <textarea id={`rv-comment-${book}`} name="comment" rows="5" required
+                placeholder="What did it do to you?"></textarea>
+
+      <!-- Bots fill this in. People never see it. -->
+      <div class="hp" aria-hidden="true">
+        <label for={`rv-website-${book}`}>Leave this empty</label>
+        <input id={`rv-website-${book}`} type="text" name="website" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <p class="muted small">Reviews are read before they appear, so yours will not show straight away.</p>
+      <button class="btn" type="submit">Send the review</button>
+      <p class="rv-status" role="status" aria-live="polite"></p>
+    </form>
+  </details>
+</section>
+
+<script>
+  const stars = (n: number) => '★'.repeat(n) + '☆'.repeat(5 - n);
+
+  document.querySelectorAll<HTMLElement>('[data-reviews]').forEach(async (root) => {
+    const book = root.dataset.reviews!;
+    const list = root.querySelector<HTMLOListElement>('.rv-list')!;
+    const empty = root.querySelector<HTMLParagraphElement>('.rv-empty')!;
+    const summary = root.querySelector<HTMLElement>('.rv-summary')!;
+
+    try {
+      const res = await fetch(`/api/reviews?book=${encodeURIComponent(book)}`);
+      const data = await res.json();
+      if (!data.ok || !data.count) return;
+
+      summary.hidden = false;
+      summary.querySelector('.rv-stars')!.textContent = stars(Math.round(data.average));
+      summary.querySelector('.rv-average')!.textContent =
+        `${data.average} out of 5, from ${data.count} review${data.count === 1 ? '' : 's'}`;
+
+      empty.hidden = true;
+      for (const r of data.reviews) {
+        const li = document.createElement('li');
+        const head = document.createElement('p');
+        head.className = 'rv-head';
+        head.textContent = `${stars(r.stars)} ${r.name}`;
+        const body = document.createElement('p');
+        body.className = 'rv-body';
+        body.textContent = r.comment;      // textContent, so nothing can inject markup
+        li.append(head, body);
+        list.append(li);
+      }
+    } catch {
+      /* reviews are an enhancement; if the fetch fails the page is still whole */
+    }
+  });
+
+  document.querySelectorAll<HTMLFormElement>('form[data-review]').forEach((form) => {
+    const status = form.querySelector<HTMLParagraphElement>('.rv-status');
+    const button = form.querySelector<HTMLButtonElement>('button[type=submit]');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (button) button.disabled = true;
+      if (status) status.textContent = 'Sending...';
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { accept: 'application/json' },
+        });
+        const data = await res.json();
+        if (status) status.textContent = data.message;
+        if (data.ok) form.reset();
+      } catch {
+        if (status) status.textContent = 'That did not send. Please try again.';
+      } finally {
+        if (button) button.disabled = false;
+      }
+    });
+  });
+</script>
