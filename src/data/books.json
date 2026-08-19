@@ -221,22 +221,17 @@
     "description": "Robyn is seventeen, furious, and four hundred miles from everything she knows. Her mother is a year dead; her father has moved them to a school at the edge of Scotland and a house with a locked hangar at the bottom of the garden; and the only thing that still makes sense is the weight of a foil in her hand.",
     "words": 97274,
     "formats": [
-      "ebook",
-      "paperback"
+      "ebook"
     ],
     "amazon_url": "",
     "cover": "beyond-the-pale.jpg",
     "flagship": true,
     "themes": [],
     "featured": false,
-    "status": "unpublished",
+    "status": "published",
     "series": {
       "name": "Where Giants Sleep",
       "url": "/where-giants-sleep/"
-    },
-    "coming_soon": {
-      "eyebrow": "The first book of Where Giants Sleep",
-      "note": "Where Giants Sleep is one story told as three books, and it releases as one campaign in three drops. This is where it begins."
     },
     "chapters": 56,
     "isbn_ebook": "978-1-919126-06-7",
@@ -245,14 +240,15 @@
     "stage": "10-ANALYSIS",
     "on_site": true,
     "payhip_url": "",
-    "asin_ebook": "",
+    "asin_ebook": "B0HFP9JWY9",
     "tagline": "Some borders are places. This one is a moment.",
     "blurb": [
       "Robyn is seventeen, furious, and four hundred miles from everything she knows. Her mother is a year dead; her father has moved them to a school at the edge of Scotland and a house with a locked hangar at the bottom of the garden; and the only thing that still makes sense is the weight of a foil in her hand.",
       "Then she learns what her father keeps in the hangar. And why, in 1978, four boys walked out of this school and never walked back.",
       "Beyond the pale there is a country where your life is worth exactly what you carry in glass, where the weather hunts, and where the one rule that matters is her father’s: note the exact time you arrived.",
       "Robyn thinks the strangest thing about the Cage is that she can cross into it at all. She is wrong. The strangest thing is how well it knows her."
-    ]
+    ],
+    "published_on": "2026-08-18"
   },
   {
     "slug": "paupers-weatherglass",
@@ -269,14 +265,10 @@
     "flagship": true,
     "themes": [],
     "featured": false,
-    "status": "unpublished",
+    "status": "published",
     "series": {
       "name": "Where Giants Sleep",
       "url": "/where-giants-sleep/"
-    },
-    "coming_soon": {
-      "eyebrow": "The second book of Where Giants Sleep",
-      "note": "Where Giants Sleep is one story told as three books, and it releases as one campaign in three drops. Start with Beyond the Pale."
     },
     "chapters": 46,
     "isbn_ebook": "978-1-919126-09-8",
@@ -285,14 +277,16 @@
     "stage": "10-ANALYSIS",
     "on_site": true,
     "payhip_url": "",
-    "asin_ebook": "",
+    "asin_ebook": "B0HFQ6M3YG",
     "tagline": "The flower closes before the rain.",
     "blurb": [
       "Robyn came home with a story she can never tell, and marbles she should not have. She has a degree now, a life, a best friend who asks no questions. It has almost been enough.",
       "Then, in the crowd at her graduation, she sees a man who cannot possibly be there.",
       "The Cage wants her back, and this time it will not take a schoolgirl. It takes a Baroness with borrowed papers, a smuggler’s ship with a wrong name, a resistance that trades in the one currency that matters, and a man called Lord London who keeps other people’s treasures because they are safer with him. Robyn will lie her way to the top of a world to finish what the missing boys began, and she will discover what it costs to hold on to what you win.",
       "And under everything, faint as a fridge in another room, there is a sound she has learned not to hear. One note. Steady. Counting."
-    ]
+    ],
+    "published_on": "2026-08-18",
+    "asin_paperback": "1919126104"
   },
   {
     "slug": "the-persistence-of-memory",
@@ -309,14 +303,10 @@
     "flagship": true,
     "themes": [],
     "featured": false,
-    "status": "unpublished",
+    "status": "published",
     "series": {
       "name": "Where Giants Sleep",
       "url": "/where-giants-sleep/"
-    },
-    "coming_soon": {
-      "eyebrow": "The last book of Where Giants Sleep",
-      "note": "Where Giants Sleep is one story told as three books, and it releases as one campaign in three drops. Start with Beyond the Pale."
     },
     "chapters": 15,
     "isbn_ebook": "978-1-919126-12-8",
@@ -325,14 +315,16 @@
     "stage": "10-ANALYSIS",
     "on_site": true,
     "payhip_url": "",
-    "asin_ebook": "",
+    "asin_ebook": "B0HFPS7Q3H",
     "tagline": "Time to wake up.",
     "blurb": [
       "Five years have passed since the Cage let Robyn go, and life at the bottom of the garden is kind. Her son is growing. The house is warm. The light is always exactly where she needs it.",
       "That is the problem.",
       "Because lately there are flashes: a rail cold under her hand, a tube low in her throat, a voice a hand’s breadth away saying her name into a dark it is not sure can hear. And once Robyn pulls the first loose thread, the whole warm world begins to come apart in her lap.",
       "Somewhere above her there is a room. In the room there is a woman who has never once stopped saying it: to the moon and back. Twelve marbles will get Robyn there. She has six. And the world is draining while she counts."
-    ]
+    ],
+    "published_on": "2026-08-18",
+    "asin_paperback": "1919126139"
   },
   {
     "slug": "a-cosmology-of-emergence-the-wild-edition",
