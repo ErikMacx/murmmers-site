@@ -221,7 +221,8 @@
     "description": "Robyn is seventeen, furious, and four hundred miles from everything she knows. Her mother is a year dead; her father has moved them to a school at the edge of Scotland and a house with a locked hangar at the bottom of the garden; and the only thing that still makes sense is the weight of a foil in her hand.",
     "words": 97274,
     "formats": [
-      "ebook"
+      "ebook",
+      "paperback"
     ],
     "amazon_url": "",
     "cover": "beyond-the-pale.jpg",
@@ -248,7 +249,8 @@
       "Beyond the pale there is a country where your life is worth exactly what you carry in glass, where the weather hunts, and where the one rule that matters is her father’s: note the exact time you arrived.",
       "Robyn thinks the strangest thing about the Cage is that she can cross into it at all. She is wrong. The strangest thing is how well it knows her."
     ],
-    "published_on": "2026-08-18"
+    "published_on": "2026-08-18",
+    "asin_paperback": "1919126074"
   },
   {
     "slug": "paupers-weatherglass",
