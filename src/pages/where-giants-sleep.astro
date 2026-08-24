@@ -1,16 +1,18 @@
 ---
 import Base from '../layouts/Base.astro';
 import BookCard from '../components/BookCard.astro';
-import { forthcoming } from '../lib/books';
+import { listed } from '../lib/books';
 
-// The three books in reading order, as they sit in books.json.
-const trilogy = forthcoming.filter((b) => b.series?.url === '/where-giants-sleep/');
+// The three books in reading order, as they sit in books.json. This filters
+// the full list, not the forthcoming one: all three went on sale in August
+// 2026 and a forthcoming filter silently rendered no cards at all.
+const trilogy = listed.filter((b) => b.series?.url === '/where-giants-sleep/');
 ---
 
-<Base title="Where Giants Sleep — coming soon" description="One story, told as three books. Where Giants Sleep, a trilogy from Murmmers Press. Coming soon.">
+<Base title="Where Giants Sleep" description="One story, told as three books. Where Giants Sleep, a trilogy from Murmmers Press. All three are out now in paperback and ebook.">
   <section class="how-hero">
     <div class="wrap">
-      <p class="eyebrow">Coming soon</p>
+      <p class="eyebrow">Out now</p>
       <h1>Where Giants Sleep</h1>
       <p class="lede">One story, told as three books. A girl crosses out of a grief-struck life into a world with its own currency, its own wars, and its own way home. She survives it twice. The third crossing is the one that matters.</p>
       <p class="strapline">Everything she loves is in one world. Everyone who loves her is in the other.</p>
@@ -46,7 +48,7 @@ const trilogy = forthcoming.filter((b) => b.series?.url === '/where-giants-sleep
           <p>What survives the crossing. The climb, the deep, and what it costs to come all the way home.</p>
         </div>
       </div>
-      <p>Releasing as one campaign, in three drops. Soon, from Murmmers Press.</p>
+      <p>All three are out now, in paperback and ebook, from Murmmers Press.</p>
       <p><a href="/books/">See the full catalogue</a></p>
     </div>
   </section>
