@@ -1,5 +1,44 @@
 [
   {
+    "slug": "captain-mandible",
+    "title": "Captain Mandible",
+    "subtitle": "Falmouth for Orders",
+    "description": "A box comes down out of an aunt's roof, soft with damp, and inside the newspaper and a tea towel there is a skull. Every family has an indiscretion it keeps upstairs. Nobody has seen this one. Everybody can tell you which room it wasn't allowed in. He is a Mandeville, four generations back, a master under sail, and he has not finished talking.",
+    "tagline": "Everybody knows which room it isn’t allowed in.",
+    "blurb": [
+      "The box comes down out of the roof at Hessie's, the cardboard gone soft as a wet digestive. Newspaper inside, a good nest of it, then a folded tea towel with a Dutch windmill on it, and inside the tea towel, him.",
+      "Nobody tells you the weight.",
+      "He is a Mandeville, four generations back, a master under sail, and he has not finished talking. He has opinions about the nose he no longer has, about the century he has woken into, and about the schoolteacher now holding him under a good lamp at the kitchen table.",
+      "Falmouth for orders: a grain ship left Australia and sailed three months without knowing where she was bound, because the market moved faster than she did. She came up the Channel, anchored, and waited for a telegram to tell her where she was going."
+    ],
+    "words": 39357,
+    "formats": [
+      "ebook"
+    ],
+    "amazon_url": "",
+    "cover": "captain-mandible.jpg",
+    "flagship": true,
+    "themes": [],
+    "featured": true,
+    "status": "unpublished",
+    "chapters": 10,
+    "pages": 226,
+    "isbn_ebook": "978-1-919126-24-1",
+    "isbn_paperback": "978-1-919126-25-8",
+    "isbn_hardcover": "978-1-919126-26-5",
+    "stage": "",
+    "on_site": true,
+    "payhip_url": "",
+    "published_on": "2026-08-24",
+    "asin_ebook": "",
+    "asin_paperback": "",
+    "asin_hardcover": "",
+    "coming_soon": {
+      "eyebrow": "Coming very soon",
+      "note": "Captain Mandible is with Amazon now and goes on sale within days, in paperback and hardcover as well as ebook."
+    }
+  },
+  {
     "slug": "the-petrosphere-odyssey",
     "title": "The Petrosphere Odyssey",
     "subtitle": "An Ancient Pilgrimage",
