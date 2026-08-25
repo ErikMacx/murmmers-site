@@ -49,6 +49,11 @@ const jsonLd = {
   type="book"
 >
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(jsonLd)} />
+  {/* Payhip's overlay checkout: the reader pays without leaving the page.
+      Loaded only where a direct link exists, and the anchor still carries the
+      product URL, so if the script fails the button is an ordinary link to
+      Payhip rather than a dead button. */}
+  {hasDirect && <script slot="head" src="https://payhip.com/payhip.js" async></script>}
 
   <section class="wrap">
     <p style="margin-top:1.5rem"><a class="muted" href="/books/">&larr; All books</a></p>
@@ -80,7 +85,8 @@ const jsonLd = {
               : <span class="btn disabled" aria-disabled="true">Amazon listing coming soon</span>}
 
             {hasDirect
-              ? <a class="btn ghost" href={book.payhip_url}>Buy the ebook direct from Murmmers</a>
+              ? <a class="btn ghost payhip-buy-button" data-theme="green"
+                   href={book.payhip_url}>Buy the ebook direct from Murmmers</a>
               : <span class="btn disabled" aria-disabled="true">Ebook direct from Murmmers, soon</span>}
 
             {hasDirect && (
