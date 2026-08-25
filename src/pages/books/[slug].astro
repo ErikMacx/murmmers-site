@@ -83,7 +83,9 @@ const jsonLd = {
               ? <a class="btn ghost" href={book.payhip_url}>Buy the ebook direct from Murmmers</a>
               : <span class="btn disabled" aria-disabled="true">Ebook direct from Murmmers, soon</span>}
 
-            <p class="buys-note muted">Buying the ebook direct sends more of the price to the press, and the file is yours to keep: no account, no app, no expiry. Print editions are through Amazon.</p>
+            {hasDirect && (
+              <p class="buys-note muted">Buying the ebook direct sends more of the price to the press, and the file is yours to keep: no account, no app, no expiry. Print editions are through Amazon.</p>
+            )}
           </div>
         ) : (
           <div class="coming-soon">

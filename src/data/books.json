@@ -13,14 +13,15 @@
     ],
     "words": 39357,
     "formats": [
-      "ebook"
+      "ebook",
+      "paperback"
     ],
     "amazon_url": "",
     "cover": "captain-mandible.jpg",
     "flagship": true,
     "themes": [],
     "featured": true,
-    "status": "unpublished",
+    "status": "published",
     "chapters": 10,
     "pages": 226,
     "isbn_ebook": "978-1-919126-24-1",
@@ -29,14 +30,10 @@
     "stage": "",
     "on_site": true,
     "payhip_url": "",
-    "published_on": "2026-08-24",
+    "published_on": "2026-08-25",
     "asin_ebook": "",
-    "asin_paperback": "",
-    "asin_hardcover": "",
-    "coming_soon": {
-      "eyebrow": "Coming very soon",
-      "note": "Captain Mandible is with Amazon now and goes on sale within days, in paperback and hardcover as well as ebook."
-    }
+    "asin_paperback": "1919126252",
+    "asin_hardcover": ""
   },
   {
     "slug": "the-petrosphere-odyssey",
@@ -132,7 +129,7 @@
     "title": "Coherence",
     "subtitle": "The Essence and The Form",
     "description": "There are plenty of books about reaching that moment. There are very few about the morning after it. Fifty-two short stories that are really twenty-six, each one told twice. In The Essence, a recognition is compressed into a single held image. In The Form, the same recognition is lived by a particular person, in a particular week, at what it actually cost. The people are ordinary and the weather is northern. There is nothing to join, nothing to believe, and nothing at the end to buy.",
-    "words": 21906,
+    "words": 35056,
     "formats": [
       "ebook",
       "paperback",
