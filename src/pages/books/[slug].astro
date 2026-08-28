@@ -85,7 +85,8 @@ const jsonLd = {
               : <span class="btn disabled" aria-disabled="true">Amazon listing coming soon</span>}
 
             {hasDirect
-              ? <a class="btn ghost payhip-buy-button" data-theme="green"
+              ? <a class="btn ghost payhip-buy-button" data-theme="none"
+                   data-product={book.payhip_url.split('/').pop()}
                    href={book.payhip_url}>Buy the ebook direct from Murmmers</a>
               : <span class="btn disabled" aria-disabled="true">Ebook direct from Murmmers, soon</span>}
 

@@ -59,7 +59,7 @@
     "isbn_hardcover": "978-1-919126-02-9",
     "stage": "40-TYPESET",
     "on_site": true,
-    "payhip_url": "",
+    "payhip_url": "https://payhip.com/b/N0SmJ",
     "published_on": "2026-07-25",
     "prices": {
       "ebook": {
@@ -77,8 +77,7 @@
     },
     "asin_ebook": "B0HBWV4CKP",
     "asin_paperback": "1919126015",
-    "asin_hardcover": "1919126023",
-    "payhip_url_pending": "https://payhip.com/b/N0SmJ"
+    "asin_hardcover": "1919126023"
   },
   {
     "slug": "the-honest-pilgrim",
@@ -104,7 +103,7 @@
     "themes": [],
     "featured": true,
     "on_site": true,
-    "payhip_url": "",
+    "payhip_url": "https://payhip.com/b/YeOIf",
     "published_on": "2026-08-05",
     "prices": {
       "ebook": {
@@ -148,7 +147,7 @@
     "isbn_hardcover": "978-1-919126-17-3",
     "stage": "40-TYPESET",
     "on_site": true,
-    "payhip_url": "",
+    "payhip_url": "https://payhip.com/b/GfU1s",
     "published_on": "2026-08-07",
     "prices": {
       "ebook": {
@@ -192,7 +191,7 @@
     "isbn_hardcover": "978-1-919126-20-3",
     "stage": "40-TYPESET",
     "on_site": true,
-    "payhip_url": "",
+    "payhip_url": "https://payhip.com/b/v9gub",
     "published_on": "2026-08-13",
     "prices": {
       "ebook": {
