@@ -1,5 +1,41 @@
 [
   {
+    "slug": "lumper",
+    "title": "Lumper",
+    "subtitle": "Nobody Cries Over a Penny",
+    "description": "On the shelf over the salt box stood a bell, iron, cracked, and nobody living had heard it rung. In 1845 the potatoes go down in a single night, and a man in County Cork swears on that bell that the dead of his house will be named out loud every year, in whatever house holds him. Six generations keep the day and never once explain it, from a Clondrohid ridge to a Glasgow close, a Lanarkshire pit row, a Springburn kitchen in the summer of the Somme, Clydebank on the night the town burns, a Paisley close where the wage comes home past four public houses, and a Belfast drawer in 2026 where a boy of six who cannot sit still finds the bell, and rings it.",
+    "tagline": "Some families have a family bible, others a bell.",
+    "blurb": [
+      "On the shelf over the salt box stood a bell. Iron, folded and riveted up the seam, with a crack in it. No one living had heard it rung. Nobody in the house believed the story that went with it, and nobody in the house would throw it out.",
+      "In the autumn of 1845 the potatoes go down in a single night. Three years later Denis Muldoon stands in a road in County Cork with his own house coming down behind him, sets the bell against his chest, and swears that the dead of that house will be named out loud every year, in whatever house holds him, wherever that house stands.",
+      "The bell crosses to Glasgow in the middle of a bundle. It goes to a coal row in Lanarkshire, to a Springburn kitchen in the summer of the Somme, under a stone stair in Clydebank on the night the town burns, to a Paisley close where the wage comes home past four public houses. Six generations keep the day and add their names to it, and not one of them explains it to the ones coming after.",
+      "By 2026 it is in a drawer in Belfast with the fuses and the spare bulbs, and a boy of six who cannot sit still finds it, and rings it."
+    ],
+    "words": 61980,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "lumper.jpg",
+    "flagship": true,
+    "themes": [],
+    "featured": true,
+    "status": "published",
+    "chapters": 13,
+    "pages": 206,
+    "isbn_ebook": "",
+    "isbn_paperback": "978-1-919126-28-9",
+    "isbn_hardcover": "",
+    "stage": "",
+    "on_site": true,
+    "payhip_url": "",
+    "published_on": "2026-08-29",
+    "asin_ebook": "B0HB2LNNDY",
+    "asin_paperback": "1919126287",
+    "asin_hardcover": ""
+  },
+  {
     "slug": "captain-mandible",
     "title": "Captain Mandible",
     "subtitle": "Falmouth for Orders",
@@ -23,7 +59,7 @@
     "featured": true,
     "status": "published",
     "chapters": 10,
-    "pages": 226,
+    "pages": 160,
     "isbn_ebook": "978-1-919126-24-1",
     "isbn_paperback": "978-1-919126-25-8",
     "isbn_hardcover": "978-1-919126-26-5",
