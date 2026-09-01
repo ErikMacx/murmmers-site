@@ -29,11 +29,16 @@
     "isbn_hardcover": "",
     "stage": "",
     "on_site": true,
-    "payhip_url": "",
+    "payhip_url": "https://payhip.com/b/ns4IR",
     "published_on": "2026-08-29",
     "asin_ebook": "B0HB2LNNDY",
     "asin_paperback": "1919126287",
-    "asin_hardcover": ""
+    "asin_hardcover": "",
+    "prices": {
+      "ebook": {
+        "gbp": 6.99
+      }
+    }
   },
   {
     "slug": "captain-mandible",
