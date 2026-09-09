@@ -29,11 +29,16 @@
     "isbn_hardcover": "",
     "stage": "",
     "on_site": true,
-    "payhip_url": "",
+    "payhip_url": "https://payhip.com/b/hEkHN",
     "published_on": "2026-09-09",
     "asin_ebook": "B0HJ8VRQHM",
     "asin_paperback": "1919126341",
-    "asin_hardcover": ""
+    "asin_hardcover": "",
+    "prices": {
+      "ebook": {
+        "gbp": 2.95
+      }
+    }
   },
   {
     "slug": "lumper",
