@@ -13,7 +13,8 @@
     ],
     "words": 48156,
     "formats": [
-      "ebook"
+      "ebook",
+      "paperback"
     ],
     "amazon_url": "",
     "cover": "count-your-breakfasts.jpg",
@@ -27,11 +28,11 @@
     "isbn_paperback": "978-1-919126-34-0",
     "isbn_hardcover": "",
     "stage": "",
-    "on_site": false,
+    "on_site": true,
     "payhip_url": "",
     "published_on": "2026-09-09",
-    "asin_ebook": "",
-    "asin_paperback": "",
+    "asin_ebook": "B0HJ8VRQHM",
+    "asin_paperback": "1919126341",
     "asin_hardcover": ""
   },
   {
