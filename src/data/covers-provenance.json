@@ -145,5 +145,12 @@
     "cover": "lumper.jpg",
     "provenance": "cover JPG: Documents/ALL COMPLETE VELLUM BOOKS/Lumper - The Penny Nobody Could Afford/Kindle/Lumper-Kindle-2026-08-29.jpg (native 1707x2560, not upscaled to the 1800x2700 the other covers happen to carry)",
     "bytes": 1011675
+  },
+  {
+    "slug": "count-your-breakfasts",
+    "title": "Count Your Breakfasts",
+    "cover": "count-your-breakfasts.jpg",
+    "provenance": "cover JPG: Murmmers/murmmers-press/books/Count Your Breakfasts/CountYourBreakfasts_cover_1600x2560.jpg (1600x2560, aspect 0.6250, narrower than the 0.6667 the other jackets carry)",
+    "bytes": 1935596
   }
 ]

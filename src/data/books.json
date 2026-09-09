@@ -1,5 +1,40 @@
 [
   {
+    "slug": "count-your-breakfasts",
+    "title": "Count Your Breakfasts",
+    "subtitle": "Death’s Apprentice",
+    "description": "In February, on the frost of a windscreen in a hospital car park, she finds a mark nobody has taught her: two circles, one above the other, and a line between them. What follows is her first year as Death's apprentice. Twenty rooms, and what she saw in them, and what she did not understand, which she kept in a separate column. Then the book opens a second door and goes outside, to a week in September on a Scottish ben with four hillwalkers and the old Death walking behind them saying very little.",
+    "tagline": "Death is only where it stands to look from.",
+    "blurb": [
+      "In February, on the frost of a windscreen in a hospital car park, she finds a mark nobody has taught her: two circles, one above the other, and a line between them. She has been three months at his side by then, in corridors, watching, and she has not been given a room of her own.",
+      "What follows is her first year. Twenty rooms, and what she saw in them, and what she did not understand, which she kept in a separate column. She has a pencil. She has hands that go through things. She has been told her job is to be of no use, and she is learning what that costs.",
+      "Then the book opens a second door and goes outside. A week in September on a Scottish ben, four hillwalkers, a river to cross and a ridge to get over, and the old Death walking behind them saying very little.",
+      "This is not a book about death. It is a book about living."
+    ],
+    "words": 48156,
+    "formats": [
+      "ebook"
+    ],
+    "amazon_url": "",
+    "cover": "count-your-breakfasts.jpg",
+    "flagship": true,
+    "themes": [],
+    "featured": true,
+    "status": "published",
+    "chapters": 38,
+    "pages": 258,
+    "isbn_ebook": "978-1-919126-33-3",
+    "isbn_paperback": "978-1-919126-34-0",
+    "isbn_hardcover": "",
+    "stage": "",
+    "on_site": false,
+    "payhip_url": "",
+    "published_on": "2026-09-09",
+    "asin_ebook": "",
+    "asin_paperback": "",
+    "asin_hardcover": ""
+  },
+  {
     "slug": "lumper",
     "title": "Lumper",
     "subtitle": "Nobody Cries Over a Penny",
