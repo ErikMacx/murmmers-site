@@ -29,11 +29,16 @@
     "isbn_hardcover": "",
     "stage": "",
     "on_site": true,
-    "payhip_url": "",
+    "payhip_url": "https://payhip.com/b/8HA9c",
     "published_on": "2026-09-10",
     "asin_ebook": "B0HJCJQZ2J",
     "asin_paperback": "1919126317",
-    "asin_hardcover": ""
+    "asin_hardcover": "",
+    "prices": {
+      "ebook": {
+        "gbp": 5.99
+      }
+    }
   },
   {
     "slug": "count-your-breakfasts",
