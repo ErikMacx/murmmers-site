@@ -1,5 +1,41 @@
 [
   {
+    "slug": "the-nine-faces",
+    "title": "The Nine Faces",
+    "subtitle": "",
+    "description": "Iona Hain teaches the twelve Universal Laws, and she is the company's senior teacher for the whole of the UK and Ireland. Then they give her the archive: twenty years of member records across five systems, to be cleaned and tagged so a machine can learn to talk like her. She is the first person who has ever had all of it in one place, and at the end of a long Wednesday she asks it what goes with a member flourishing at five years. The strongest outcomes belong to the people who stopped.",
+    "tagline": "The people who left did better.",
+    "blurb": [
+      "Iona Hain teaches the twelve Universal Laws. She is the company's senior teacher for the whole of the UK and Ireland, and once a month she still stands in front of nineteen people in a leisure centre with an urn in the boot of her car and two kinds of biscuit, because the room divides over custard creams.",
+      "Then they give her the archive. Twenty years of member records across five systems, to be cleaned and tagged so a machine can learn to talk like her, and she is the first person who has ever had all of it in one place. At the end of a long Wednesday she asks it what goes with a member flourishing at five years.",
+      "The strongest outcomes belong to the people who stopped. The ones still enrolled are the ones still struggling. She checks it three ways and it gets stronger, and by then the question is in the pile with her name on it and the date.",
+      "What follows is nine kitchens, a stolen drive, a court order with a penal notice on it, and a road in Nevada in the last week of August."
+    ],
+    "words": 80782,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "the-nine-faces.jpg",
+    "flagship": true,
+    "themes": [],
+    "featured": true,
+    "status": "published",
+    "chapters": 19,
+    "pages": 322,
+    "isbn_ebook": "978-1-919126-30-2",
+    "isbn_paperback": "978-1-919126-31-9",
+    "isbn_hardcover": "",
+    "stage": "",
+    "on_site": true,
+    "payhip_url": "",
+    "published_on": "2026-09-10",
+    "asin_ebook": "B0HJCJQZ2J",
+    "asin_paperback": "1919126317",
+    "asin_hardcover": ""
+  },
+  {
     "slug": "count-your-breakfasts",
     "title": "Count Your Breakfasts",
     "subtitle": "Death’s Apprentice",

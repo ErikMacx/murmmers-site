@@ -152,5 +152,12 @@
     "cover": "count-your-breakfasts.jpg",
     "provenance": "cover JPG: Murmmers/murmmers-press/books/Count Your Breakfasts/CountYourBreakfasts_cover_1600x2560.jpg (1600x2560, aspect 0.6250, narrower than the 0.6667 the other jackets carry)",
     "bytes": 1935596
+  },
+  {
+    "slug": "the-nine-faces",
+    "title": "The Nine Faces",
+    "cover": "the-nine-faces.jpg",
+    "provenance": "Murmmers/murmmers-press/books/The Ninth Face/Final Drafts /The Nine Faces — cover 1717x2560.jpg (312ppi at 5.5in). NOT the 1843x2747 plate in the same folder, which is sharper and carries the OLD title, THE NINTH FACE.",
+    "bytes": 1072742
   }
 ]
