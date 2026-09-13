@@ -5,6 +5,7 @@ import Cover from '../../components/Cover.astro';
 import EmailSignup from '../../components/EmailSignup.astro';
 import Reviews from '../../components/Reviews.astro';
 import { listed, formatNote, amazonUrl, type Book } from '../../lib/books';
+import SongPlayer from '../../components/SongPlayer.astro';
 import { coverFor } from '../../lib/covers';
 
 export function getStaticPaths() {
@@ -26,6 +27,9 @@ const amazon = amazonUrl(book);
 const hasAmazon = published && amazon.length > 0;
 const hasDirect = published && book.payhip_url.length > 0;
 const fullTitle = book.subtitle ? `${book.title}: ${book.subtitle}` : book.title;
+
+// The trilogy has a song. The three Where Giants Sleep pages carry it; nothing else does.
+const isTrilogy = book.series?.url === '/where-giants-sleep/';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -76,6 +80,15 @@ const jsonLd = {
 
         {book.series && (
           <p class="series-link"><a href={book.series.url}>More about {book.series.name}</a></p>
+        )}
+
+        {isTrilogy && (
+          <SongPlayer
+            src="/music/alternate-reality-web.mp3"
+            download="/music/alternate-reality.mp3"
+            title="Alternate Reality"
+            note="The song written for the trilogy."
+          />
         )}
 
         {published ? (

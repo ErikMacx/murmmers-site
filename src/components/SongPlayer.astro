@@ -1,0 +1,130 @@
+---
+/**
+ * The trilogy song, on the three Where Giants Sleep book pages.
+ *
+ * It tries to start on its own, and it is written on the assumption that it
+ * will usually not be allowed to. Chrome, Safari and Firefox all refuse to
+ * autoplay audible media until a visitor has interacted with the site, so on
+ * a first visit the promise from play() rejects and nothing sounds. That is
+ * not a bug to work around: a page that makes noise at a stranger with no way
+ * to stop it also fails WCAG 2.1 SC 1.4.2. So the control is always visible,
+ * it says what it will do, and the choice is remembered.
+ *
+ * Navigation stops it for free. The site is plain multi-page, so leaving the
+ * page destroys the element and the audio with it.
+ */
+interface Props { src: string; download: string; title: string; note?: string }
+const { src, download, title, note } = Astro.props;
+---
+<figure class="song" data-song>
+  <button class="song-play" type="button" data-song-toggle aria-pressed="false">
+    <span class="song-icon" aria-hidden="true"></span>
+    <span class="song-label">Play the song</span>
+  </button>
+
+  <figcaption class="song-meta">
+    <p class="song-title">{title}</p>
+    {note && <p class="song-note">{note}</p>}
+    <a class="song-dl" href={download} download>Download it free</a>
+  </figcaption>
+
+  <audio data-song-audio preload="none" src={src}></audio>
+</figure>
+
+<script>
+  const KEY = 'murmmers:song:paused';
+
+  document.querySelectorAll('[data-song]').forEach((root) => {
+    const audio = root.querySelector('[data-song-audio]') as HTMLAudioElement | null;
+    const btn = root.querySelector('[data-song-toggle]') as HTMLButtonElement | null;
+    const label = root.querySelector('.song-label') as HTMLElement | null;
+    if (!audio || !btn || !label) return;
+
+    const paint = () => {
+      const playing = !audio.paused && !audio.ended;
+      btn.setAttribute('aria-pressed', String(playing));
+      root.classList.toggle('is-playing', playing);
+      label.textContent = playing ? 'Pause the song' : 'Play the song';
+    };
+
+    const start = () => {
+      // preload is "none", so ask for the bytes only when they are wanted.
+      audio.load();
+      return audio.play();
+    };
+
+    btn.addEventListener('click', () => {
+      if (audio.paused) {
+        // An explicit press is the visitor's choice; clear any earlier refusal.
+        try { sessionStorage.removeItem(KEY); } catch {}
+        start().catch(() => {});
+      } else {
+        audio.pause();
+        // Remember it, so the next trilogy page does not start up again.
+        try { sessionStorage.setItem(KEY, '1'); } catch {}
+      }
+    });
+
+    ['play', 'pause', 'ended'].forEach((e) => audio.addEventListener(e, paint));
+    paint();
+
+    let refused = false;
+    try { refused = sessionStorage.getItem(KEY) === '1'; } catch {}
+    if (!refused) {
+      // Will reject on a first visit. That is the expected path, not an error:
+      // the button is already on the page and already says what it does.
+      start().catch(() => {});
+    }
+  });
+</script>
+
+<style>
+  .song {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 1.75rem 0 0;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--card);
+  }
+  .song-play {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex: 0 0 auto;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    font-family: var(--font-label);
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+  }
+  .song-play:hover { border-color: var(--accent); }
+  .song-play:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .song-icon {
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 10px;
+    border-color: transparent transparent transparent var(--accent-deep);
+  }
+  .is-playing .song-icon {
+    width: 10px; height: 12px;
+    border-width: 0;
+    border-left: 3px solid var(--accent-deep);
+    border-right: 3px solid var(--accent-deep);
+    background: transparent;
+  }
+  .song-meta { margin: 0; min-width: 0; }
+  .song-title { margin: 0; font-family: var(--font-display); }
+  .song-note { margin: 0.15rem 0 0; color: var(--ink-soft); font-size: 0.9rem; }
+  .song-dl { display: inline-block; margin-top: 0.2rem; font-size: 0.9rem; }
+  @media (max-width: 32rem) {
+    .song { flex-direction: column; align-items: flex-start; }
+  }
+</style>
