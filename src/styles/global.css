@@ -246,6 +246,7 @@ p { margin: 0 0 1rem; }
 .role { border: 1px solid var(--line); border-radius: 12px; padding: clamp(1.1rem, 3vw, 1.6rem); background: var(--card); box-shadow: var(--shadow); }
 .role h3 { font-size: 1.3rem; margin-bottom: .35rem; }
 .role p { margin: 0; color: var(--ink-soft); line-height: 1.5; }
+.roles-note { margin-top: clamp(1.4rem, 3.5vw, 2rem); }
 
 .how-gates p { font-family: var(--font-display); font-size: clamp(1.15rem, 2.6vw, 1.5rem); line-height: 1.5; max-width: 40rem; }
 .how-gates p + p { margin-top: 1em; }
