@@ -36,10 +36,12 @@
     "asin_hardcover": "",
     "prices": {
       "ebook": {
-        "usd": 7.99
+        "usd": 7.99,
+        "gbp": 5.99
       },
       "paperback": {
-        "usd": 16.99
+        "usd": 16.99,
+        "gbp": 12.68
       }
     }
   },
