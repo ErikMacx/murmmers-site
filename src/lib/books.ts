@@ -64,6 +64,14 @@ export const featured = listed.filter((b) => b.featured);
 export const published = listed.filter((b) => b.status === 'published');
 export const forthcoming = listed.filter((b) => b.status !== 'published');
 
+// A count in words, capitalised, for copy that states how many books are out.
+// Counted from the catalogue at build time: a hand-typed number here went
+// stale the week the list grew.
+const NUMBER_WORDS = ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven',
+  'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen',
+  'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen', 'Twenty'];
+export const countWord = (n: number): string => NUMBER_WORDS[n] ?? String(n);
+
 export const bySlug = (slug: string): Book | undefined =>
   books.find((b) => b.slug === slug);
 

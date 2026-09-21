@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import BookCard from '../../components/BookCard.astro';
 import EmailSignup from '../../components/EmailSignup.astro';
-import { published, forthcoming } from '../../lib/books';
+import { published, forthcoming, countWord } from '../../lib/books';
 ---
 
 <Base title="Books" description="The Murmmers Press catalogue: fiction with soul, published and forthcoming.">
@@ -10,7 +10,7 @@ import { published, forthcoming } from '../../lib/books';
     <div class="wrap">
       <p class="eyebrow">The catalogue</p>
       <h1>Books</h1>
-      <p class="prose muted">Four books out in the world, and a trilogy on its way. Several are novella length: single-sitting reads, made to be finished in one quiet evening.</p>
+      <p class="prose muted">{countWord(published.length)} books out in the world, from novellas made to be finished in one quiet evening to full-length novels that ask for a week of them.</p>
 
       <h2 class="band-head">Out now</h2>
       <div class="book-grid">
