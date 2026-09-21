@@ -159,5 +159,12 @@
     "cover": "the-nine-faces.jpg",
     "provenance": "Murmmers/murmmers-press/books/The Ninth Face/Final Drafts /The Nine Faces — cover 1717x2560.jpg (312ppi at 5.5in). NOT the 1843x2747 plate in the same folder, which is sharper and carries the OLD title, THE NINTH FACE.",
     "bytes": 1072742
+  },
+  {
+    "slug": "the-face-of-clemency",
+    "title": "The Face of Clemency",
+    "cover": "the-face-of-clemency.jpg",
+    "provenance": "Vellum ebook front, ALL COMPLETE VELLUM BOOKS/The Face of Clemency/Kindle/The-Face-of-Clemency-Kindle-2026-09-19.jpg (1600x2560), via the press repo's assets/the-face-of-clemency-front-1600x2560.jpg, sha256 12bc7be3. The same art is the paperback front on the KDP wrap.",
+    "bytes": 899959
   }
 ]

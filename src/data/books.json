@@ -1,5 +1,49 @@
 [
   {
+    "slug": "the-face-of-clemency",
+    "title": "The Face of Clemency",
+    "subtitle": "",
+    "description": "Clemency Carsewell is twenty-two, a final-year medical student on an Edinburgh cancer ward, and the singer in a band she does not talk about. Then she starts losing time: an hour at a window with the tea gone cold, forty minutes on a path in the rain, finished songs in her notebook at four in the morning with no memory of the writing. There are two accounts. One has a clinical name. In the other she was sent, and is being carried. Both fit the findings. Neither can be tested from inside.",
+    "tagline": "It depends what you bring to it.",
+    "blurb": [
+      "Clemency Carsewell is twenty-two, a final-year medical student on an Edinburgh cancer ward, and the singer in a band she does not talk about. After her shift she comes back up in her own coat and sings the old songs to a dying electrician. The fans’ sign is two fists, one set on the other: a heartbeat if you knock them, teeth if you hold them still. Half the country wears the heart. The other half has taken the skull.",
+      "Then she starts losing time. An hour at a window with the tea gone cold. Forty minutes on a path in the rain. At four in the morning, finished songs arrive in her notebook, in her own hand, with no memory of the writing. She charts it as she would for a patient. There are two accounts. One has a clinical name. In the other she was sent, and is being carried. Both fit the findings. Neither can be tested from inside.",
+      "A man with two hundred years of quiet money is waiting for her in a bookshop, and he has paid for something that cannot be switched off. Somewhere south, three million people are walking four thousand kilometres towards Europe. And a song in her voice, that she never sang, is the most-streamed thing with her name on it.",
+      "What follows is a castle, a chapel, a wire, and a dry riverbed at first light. And a question that nobody, including her, will ever settle."
+    ],
+    "words": 108922,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "the-face-of-clemency.jpg",
+    "flagship": true,
+    "themes": [],
+    "featured": true,
+    "status": "published",
+    "chapters": 30,
+    "pages": 444,
+    "isbn_ebook": "978-1-919126-36-4",
+    "isbn_paperback": "978-1-919126-37-1",
+    "isbn_hardcover": "",
+    "stage": "",
+    "on_site": true,
+    "payhip_url": "",
+    "published_on": "2026-09-21",
+    "asin_ebook": "B0HKGG6KNV",
+    "asin_paperback": "1919126376",
+    "asin_hardcover": "",
+    "prices": {
+      "ebook": {
+        "usd": 7.99
+      },
+      "paperback": {
+        "usd": 16.99
+      }
+    }
+  },
+  {
     "slug": "the-nine-faces",
     "title": "The Nine Faces",
     "subtitle": "",
