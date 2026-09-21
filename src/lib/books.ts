@@ -67,19 +67,17 @@ export const forthcoming = listed.filter((b) => b.status !== 'published');
 export const bySlug = (slug: string): Book | undefined =>
   books.find((b) => b.slug === slug);
 
-// Which Amazon storefront the buy buttons point at. The press is UK
-// registered and prices are set in both currencies, but .com is the larger
-// market by a wide margin and Amazon offers no neutral link that redirects a
-// reader to their own store. One constant, so the whole site moves together
-// if the sales split says otherwise.
-export const AMAZON_DOMAIN = 'www.amazon.co.uk';
-
+// The buy buttons go through /go/amazon/<ASIN>, which sends each reader to
+// their own country's Amazon store (functions/go/amazon/[asin].ts). Amazon
+// offers no neutral link that does this, and a Kindle account can only buy
+// from its home store, so a single fixed domain loses every reader outside it.
+//
 // The ebook ASIN is the link to use: on a KDP title with linked editions, that
 // page carries the format strip, so a paperback buyer lands one click away.
 export function amazonUrl(b: Book): string {
   if (b.amazon_url) return b.amazon_url;
   const asin = b.asin_ebook || b.asin_paperback || b.asin_hardcover;
-  return asin ? `https://${AMAZON_DOMAIN}/dp/${asin}` : '';
+  return asin ? `/go/amazon/${asin}` : '';
 }
 
 // Honest, warm format note. Many titles are novella length: a feature, not a flaw.
