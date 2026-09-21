@@ -64,6 +64,13 @@ export const featured = listed.filter((b) => b.featured);
 export const published = listed.filter((b) => b.status === 'published');
 export const forthcoming = listed.filter((b) => b.status !== 'published');
 
+// The newest book on sale, by publication date: the one the home page shows.
+// It changes by itself on every release, so a launch gets the shop window on
+// the day people are being sent to the site.
+export const latest: Book | undefined = [...published]
+  .filter((b) => b.published_on)
+  .sort((a, b) => (b.published_on ?? '').localeCompare(a.published_on ?? ''))[0];
+
 // A count in words, capitalised, for copy that states how many books are out.
 // Counted from the catalogue at build time: a hand-typed number here went
 // stale the week the list grew.

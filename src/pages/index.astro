@@ -1,43 +1,99 @@
 ---
 import Base from '../layouts/Base.astro';
-import BookCard from '../components/BookCard.astro';
+import Cover from '../components/Cover.astro';
 import EmailSignup from '../components/EmailSignup.astro';
-import { featured } from '../lib/books';
+import { published, latest, amazonUrl, countWord } from '../lib/books';
+
+// The home page says what the press does before anything else, then shows
+// one book: the newest. Every other book lives on /books/, so the catalogue
+// is never shown twice.
+const bookCount = countWord(published.length);
+const amazon = latest ? amazonUrl(latest) : '';
+const hasDirect = !!latest?.payhip_url;
+const firstPara = latest?.blurb?.[0] ?? latest?.description ?? '';
 ---
 
 <Base title="Murmmers Press" type="website">
-  <section class="landing-hero">
-    <div class="wrap">
-      <p class="lede"><span class="l1">Everyone hurts.</span><br /><span class="l2">Everyone seeks.</span><br /><span class="l3">Everyone loves.</span></p>
-      <p class="verse">
-        Not sometimes. Always, somewhere,<br />
-        and tonight it may fall to you:<br />
-        the grief that learned your name and stayed,<br />
-        the tiredness no sleep will lift,<br />
-        the ache you have carried so quietly, so long,<br />
-        you have stopped calling it anything at all.
-      </p>
-      <p class="verse">
-        And beneath the ache, the oldest hunger:<br />
-        for the door that opens, the word that fits the wound,<br />
-        some reason to have been set down here at all.<br />
-        You have searched a hundred faces and half the books ever written,<br />
-        and some nights the searching is the last prayer you have.
-      </p>
-      <p class="verse">
-        And under even that, quieter still,<br />
-        the wish to be known, and to belong to someone,<br />
-        to be held without first earning it,<br />
-        to matter, whole, to a life that is not your own.
-      </p>
-      <p class="verse turn">
-        Hurt, and seeking, and love.<br />
-        This is the whole weather of being a person.<br />
-        You were never the only one.<br />
-        You were only the one who believed so.
-      </p>
+  {hasDirect && <script slot="head" src="https://payhip.com/payhip.js" async></script>}
+
+  <section class="home-hero">
+    <div class="wrap home-hero-grid">
+      <div>
+        <span class="eyebrow">An independent publishing house · Fiction with soul</span>
+        <h1>Books for the times being alive gets hard.</h1>
+        <p class="lead">We publish fiction with a healing element, each book kept in its author's own voice. And we carry other writers' finished books the whole way to the shops, the same way.</p>
+        <div class="cta-row">
+          <a class="btn" href="/books/">Find a book</a>
+          <a class="btn ghost" href="/for-authors/">For authors</a>
+        </div>
+        <div class="meta">
+          <span><i class="dot"></i>{bookCount} books out</span>
+          <span><i class="dot"></i>Every word human-written</span>
+          <span><i class="dot"></i>Amazon and direct</span>
+        </div>
+      </div>
+
+      <aside class="what-panel" aria-label="What we do">
+        <p class="label">What we do</p>
+        <div class="what-item">
+          <span class="n n1">01</span>
+          <div>
+            <h3>Books for readers</h3>
+            <p>Novels and stories for the ache you carry. Not cures, not advice. Company for the carrying, made of story.</p>
+            <a href="/books/">Browse the books</a>
+          </div>
+        </div>
+        <div class="what-item">
+          <span class="n n2">02</span>
+          <div>
+            <h3>Publishing for authors</h3>
+            <p>You hand us a finished manuscript. We carry it the rest of the way: the edit, the cover, the ISBNs, every shop, the launch.</p>
+            <a href="/for-authors/">How it works for authors</a>
+          </div>
+        </div>
+        <div class="what-item">
+          <span class="n n3">03</span>
+          <div>
+            <h3>A house run by machines</h3>
+            <p>AI agents do the tireless work, and a human decides at every gate. The whole house is run by machines. The books are not.</p>
+            <a href="/how-we-work/">How we work</a>
+          </div>
+        </div>
+      </aside>
     </div>
   </section>
+
+  {latest && (
+    <section class="home-latest">
+      <div class="wrap">
+        <article class="book-detail">
+          <a href={`/books/${latest.slug}/`} aria-label={latest.title}>
+            <Cover book={latest} widths={[320, 640]} sizes="(max-width: 46rem) 60vw, 20rem" loading="eager" />
+          </a>
+          <div>
+            <p class="eyebrow">Just published</p>
+            <h2 class="latest-title"><a href={`/books/${latest.slug}/`}>{latest.title}</a></h2>
+            {latest.subtitle && <p class="subtitle">{latest.subtitle}</p>}
+            {latest.tagline && <p class="tagline">{latest.tagline}</p>}
+            <p class="prose">{firstPara}</p>
+            <div class="buys">
+              {amazon && <a class="btn" href={amazon}>Buy on Amazon</a>}
+              {hasDirect && (
+                <a class="btn ghost payhip-buy-button" data-theme="none"
+                   data-product={latest.payhip_url.split('/').pop()}
+                   href={latest.payhip_url}>Buy the ebook direct from Murmmers</a>
+              )}
+            </div>
+            <p class="latest-links">
+              <a href={`/books/${latest.slug}/`}>More about {latest.title}</a>
+              <span aria-hidden="true"> · </span>
+              <a href="/books/">All {bookCount.toLowerCase()} books</a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  )}
 
   <section class="landing-medicine">
     <div class="wrap">
@@ -47,16 +103,6 @@ import { featured } from '../lib/books';
         <p><em>A voice,</em> that sits down beside you and asks for nothing at all.</p>
       </div>
       <p class="claim">To be seen. To be heard. We make both, and little else.</p>
-    </div>
-  </section>
-
-  <section class="section landing-books">
-    <div class="wrap">
-      <h2>Where to begin</h2>
-      <div class="book-grid featured">
-        {featured.map((book, i) => <BookCard book={book} loading={i < 4 ? 'eager' : 'lazy'} />)}
-      </div>
-      <p class="after-books"><a href="/books/">All books, and what is coming</a></p>
     </div>
   </section>
 
