@@ -293,6 +293,90 @@
     "asin_hardcover": "1919126058"
   },
   {
+    "slug": "the-stubborn-pilgrim",
+    "title": "The Stubborn Pilgrim",
+    "subtitle": "The Journey of Borrowed Questions",
+    "description": "A girl who cannot take what she is given refuses the old map, takes a compass that will not point, and walks fifteen Steps of her own to the same empty middle. Book Two of the Pilgrim Cycle; it stands alone. A fable to be taken slowly: one Step a night, then twenty minutes outside.",
+    "tagline": "How do you know?",
+    "blurb": [
+      "The girl from the house next door to the mender cannot take what she is given.",
+      "She has made an inventory, being thorough. Her opinions are her aunt's, her mother's, the schoolmaster's. Her sayings are her grandmother's. Even the way she folds her arms she took from the blacksmith's wife. And her sentence, “How do you know?”, came through the hedge from the man who walked the road before her and came home to mend things.",
+      "In her thirteenth year she asks for the road, as the custom of that country allows. He unrolls his grandfather's map on the bench, every town on it a true town. She will not take it. “I'll see for myself.”",
+      "So she walks fifteen Steps of her own, with a compass that will not point: to a bridge pulled down sound every twenty years and built again beside itself, a potter who talks to his wheel sooner than to her, a well that answers in other people's voices, and a room on a hill where every walker before her has left a question and no answer. On the way she has to learn the one thing a girl who refuses everything cannot do, which is to ask.",
+      "A fable of the road in fifteen Steps, to be read one a night with twenty minutes outside after each. Book Two of the Pilgrim Cycle, after The Honest Pilgrim. It stands alone."
+    ],
+    "words": 24678,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "the-stubborn-pilgrim.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published",
+    "chapters": 19,
+    "pages": 114,
+    "isbn_ebook": "",
+    "isbn_paperback": "978-1-919126-40-1",
+    "isbn_hardcover": "",
+    "stage": "90-PUBLISHED",
+    "on_site": true,
+    "payhip_url": "https://payhip.com/b/Cprmx",
+    "published_on": "2026-09-30",
+    "asin_ebook": "",
+    "asin_paperback": "1919126406",
+    "asin_hardcover": "",
+    "prices": {
+      "ebook": {
+        "gbp": 3.99
+      }
+    }
+  },
+  {
+    "slug": "the-impatient-pilgrim",
+    "title": "The Impatient Pilgrim",
+    "subtitle": "The Journey of Tomorrow's Answers",
+    "description": "A girl who wants the end of everything first walks a road that will not hurry for her: a wall, a roof, a bell, a loaf, and a winter under a shut pass. Book Three of the Pilgrim Cycle; it stands alone. A fable to be taken slowly: one Step a night, then twenty minutes outside.",
+    "tagline": "How much further?",
+    "blurb": [
+      "The girl had a hen, and the hen would not lay while she was watched, and the girl was always watching.",
+      "She wants the end of everything first. She eats the heel of the loaf because the middle takes too long. She finishes other people's sentences for them, and gets them wrong. Her mother has a warning about being careful that nobody has ever heard past its third word. In her thirteenth year, as the custom of that country allows, she asks for the road, and is through the gate at a run.",
+      "The road does not hurry for her. She takes a cart to a walling town and arrives before the quarry that feeds it, and has to walk back. A thatcher ties a knot so slowly it sets her teeth on edge, and gives it to her to untie when she has a minute. An orchard-woman gives her a twist of apple pips that will not come up without a winter on them. A founder pours a bell, and the cooling is the part no hand can touch. On a bog a man with a kettle that has never boiled tells her the start of a joke and nothing more. Then the snow shuts the pass, and she counts the holes on the board by the fire, and puts her pack on.",
+      "A fable of the road in fifteen Steps, to be read one a night with twenty minutes outside after each. It is funny, quiet and exact, and it is about the middle of things, which is nearly all of everything.",
+      "Book Three of the Pilgrim Cycle, after The Honest Pilgrim and The Stubborn Pilgrim. It stands alone."
+    ],
+    "words": 23275,
+    "formats": [
+      "ebook",
+      "paperback"
+    ],
+    "amazon_url": "",
+    "cover": "the-impatient-pilgrim.jpg",
+    "flagship": false,
+    "themes": [],
+    "featured": false,
+    "status": "published",
+    "chapters": 19,
+    "pages": 112,
+    "isbn_ebook": "",
+    "isbn_paperback": "978-1-919126-43-2",
+    "isbn_hardcover": "",
+    "stage": "90-PUBLISHED",
+    "on_site": true,
+    "payhip_url": "https://payhip.com/b/N3Ebe",
+    "published_on": "2026-10-04",
+    "asin_ebook": "",
+    "asin_paperback": "1919126430",
+    "asin_hardcover": "",
+    "prices": {
+      "ebook": {
+        "gbp": 3.99
+      }
+    }
+  },
+  {
     "slug": "coherence-essence-and-form",
     "title": "Coherence",
     "subtitle": "The Essence and The Form",

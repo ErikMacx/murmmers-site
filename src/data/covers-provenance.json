@@ -166,5 +166,19 @@
     "cover": "the-face-of-clemency.jpg",
     "provenance": "Vellum ebook front, ALL COMPLETE VELLUM BOOKS/The Face of Clemency/Kindle/The-Face-of-Clemency-Kindle-2026-09-19.jpg (1600x2560), via the press repo's assets/the-face-of-clemency-front-1600x2560.jpg, sha256 12bc7be3. The same art is the paperback front on the KDP wrap.",
     "bytes": 899959
+  },
+  {
+    "slug": "the-stubborn-pilgrim",
+    "title": "The Stubborn Pilgrim",
+    "cover": "the-stubborn-pilgrim.jpg",
+    "provenance": "front cover JPG built on the Pilgrim Cycle cover system (press repo books/_pilgrims-circle/make_cover.py), the-stubborn-pilgrim/assets/cover-source/the-stubborn-pilgrim-cover-front-2026-09-30.jpg",
+    "bytes": 1288215
+  },
+  {
+    "slug": "the-impatient-pilgrim",
+    "title": "The Impatient Pilgrim",
+    "cover": "the-impatient-pilgrim.jpg",
+    "provenance": "front cover JPG built on the Pilgrim Cycle cover system (press repo books/_pilgrims-circle/make_cover.py), the-impatient-pilgrim/assets/cover-source/the-impatient-pilgrim-cover-front-2026-09-30.jpg",
+    "bytes": 1414829
   }
 ]
