@@ -325,12 +325,16 @@
     "on_site": true,
     "payhip_url": "https://payhip.com/b/Cprmx",
     "published_on": "2026-09-30",
-    "asin_ebook": "",
+    "asin_ebook": "B0HLX7L6D2",
     "asin_paperback": "1919126406",
     "asin_hardcover": "",
     "prices": {
       "ebook": {
+        "usd": 4.99,
         "gbp": 3.99
+      },
+      "paperback": {
+        "usd": 4.99
       }
     }
   },
@@ -367,12 +371,16 @@
     "on_site": true,
     "payhip_url": "https://payhip.com/b/N3Ebe",
     "published_on": "2026-10-04",
-    "asin_ebook": "",
+    "asin_ebook": "B0HLX3R7MJ",
     "asin_paperback": "1919126430",
     "asin_hardcover": "",
     "prices": {
       "ebook": {
+        "usd": 4.99,
         "gbp": 3.99
+      },
+      "paperback": {
+        "usd": 7.99
       }
     }
   },
